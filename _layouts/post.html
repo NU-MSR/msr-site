@@ -14,12 +14,14 @@
 					<article class="post">
 
 						<section class="post-heading">
+
 							<img class="featured-image" src="{{ page.image }}">
 							<h1 class="post-title">{{ page.title }}</h1>
 							<a class="post-demo" target="_blank" href="{{ page.demo }}">
 								<span>Check out the demo</span>
 								<i class="fa fa-github"></i>
 							</a>
+
 							<div class="post-requirements">
 								<h4>Requirements</h4>
 								<ul>
@@ -28,6 +30,7 @@
 									{% endfor %}
 								</ul>
 							</div>
+
 						</section>
 
 						<section class="post-overview">
@@ -37,7 +40,35 @@
 
 						<section class="post-content">
 
-							{{ content }}
+							<div class='post-demo-instructions'>
+								<h3>Get the demo up and running</h3>
+								<ol>
+									{% for step in page.demo-instructions %}
+										{% if step[1] %}
+											<li>
+												{{ step[0] }}
+												<code>{{ step[1] }}</code>
+											</li>
+										{% else %}
+											<li>
+												{{ step }}
+											</li>
+										{% endif %}
+
+									{% endfor %}
+								</ol>
+							</div>
+
+							<div class="post-starts">
+								<h3>Great places to start</h3>
+								<ul>
+									{% for place in page.places-to-start %}
+										<li>
+											{{ place }}
+										</li>
+									{% endfor %}
+								</ul>
+							</div>
 
 						</section>
 

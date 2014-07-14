@@ -128,9 +128,9 @@ article.post .post-heading {
     border-radius: 3px; }
 article.post .post-overview h3 {
   margin: 40px 0 0 0; }
-article.post .post-content ol li {
+article.post .post-content .post-demo-instructions ol li {
   margin: 0 0 10px 0; }
-  article.post .post-content ol li code {
+  article.post .post-content .post-demo-instructions ol li code {
     display: block;
     margin: 5px 0 0 0;
     padding: 9px 10px;

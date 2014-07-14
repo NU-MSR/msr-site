@@ -203,19 +203,22 @@ article.post {
 	}
 	.post-content {
 
-		ol {
+		.post-demo-instructions {
 
-			li {
-				margin: 0 0 10px 0;
+			ol {
 
-				code {
-					display: block;
-					margin: 5px 0 0 0;
-					padding: 9px 10px;
-					background-color: #f3f57;
-					border: 1px solid #aebdcc;
-					border-radius: 4px;
-					font-family: Courier;
+				li {
+					margin: 0 0 10px 0;
+
+					code {
+						display: block;
+						margin: 5px 0 0 0;
+						padding: 9px 10px;
+						background-color: #f3f57;
+						border: 1px solid #aebdcc;
+						border-radius: 4px;
+						font-family: Courier;
+					}
 				}
 			}
 		}
