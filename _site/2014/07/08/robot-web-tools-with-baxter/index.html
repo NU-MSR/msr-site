@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	<title>ME 495 - Embedded Systems in Robotics</title>
+
+	<link rel="icon" type="image/png" href="/assets/img/nu-logo.png">
+
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="/assets/css/style.css">
+</head>
+
+	<body>
+
+		<div id="wrapper">
+
+			<header>
+	<div id="header-branding">
+		<div class="header-inner">
+			<img src="/assets/img/nu-logo.png">
+			<h2>ME 495 - Embedded Systems in Robotics</h2>
+		</div>
+	</div>
+
+	<div id="header-navigation">
+		<div class="header-inner">
+			<nav>
+				<ul>
+					<li><a href="/">HOME</a></li>
+					<li><a href="#">PROJECTS</a></li>
+					<li><a href="/about">ABOUT</a></li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+</header>
+
+			<div id="content">
+				<main>
+
+					<article class="post">
+
+						<section class="post-heading">
+							<img class="featured-image" src="/assets/img/robot-web-tools.jpg">
+							<h1 class="post-title">Robot Web Tools with Baxter</h1>
+							<a class="post-demo" target="_blank" href="https://github.com/jonrovira/robot_web_tools">
+								<span>Check out the demo</span>
+								<i class="fa fa-github"></i>
+							</a>
+							<div class="post-requirements">
+								<h4>Requirements</h4>
+								<ul>
+									
+										<li>ros-hydro-ros-base (basic ROS installation)</li>
+									
+										<li>ros-hydro-rosbridge-server (rosbridge_server)</li>
+									
+										<li>mjpeg_server</li>
+									
+										<li>Rethink Robotics Baxter robot</li>
+									
+								</ul>
+							</div>
+						</section>
+
+						<section class="post-overview">
+							<h3>Overview</h3>
+							<p>In this project, you will demonstrate the capabilities of Robot Web Tools, particularly when interfacing it with Rethink Robotics' Baxter robot. The included demo contains code to publish a simple message to a ROS Topic, stream one of Baxter's camera feeds, and control Baxter's left arm, all via a web browser.</p>
+						</section>
+
+						<section class="post-content">
+
+							<h3 id="get-the-demo-up-and-running">Get the demo up and running</h3>
+<ol>
+  <li>Make sure “Enable Networking” is unchecked in the networking menu</li>
+  <li>Ensure that Baxter ethernet cable is connected to PC</li>
+  <li>Open up a terminal and run Avahi’s network address configuration daemon
+<code>
+$ sudo avahi-autoipd eth0
+</code></li>
+  <li>In a new terminal, start roscore
+<code>
+$ roscore
+</code></li>
+  <li>In a new terminal, launch a rosbridge server
+<code>
+$
+roslaunch rosbridge_server rosbridge_websocket.launch
+</code></li>
+  <li>In a new terminal, launch a mjpeg server
+<code>
+$ rosrun mjpeg_server mjpeg_server
+</code></li>
+  <li>In Google Chrome, navigate to the local html page
+<code>
+file:///home/puppeteer/jons_stuff/catkin_ws/src/robot_web_tools/src/index.html
+</code></li>
+  <li>To see Baxter’s left hand camera stream, run the startcamera script in a new terminal
+<code>
+$ rosrun robot_web_tools startcamera.py
+</code></li>
+</ol>
+
+
+						</section>
+
+
+					</article>
+
+				</main>
+			</div>
+
+			<footer>
+	<div id="foot-inner">
+	</div>
+</footer>
+
+		</div>
+
+	</body>
+</html>
