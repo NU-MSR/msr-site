@@ -16,10 +16,7 @@ html, body {
         html body #wrapper #content .page, body body #wrapper #content .page {
           width: 100%; }
 
-h1, h2, h3 {
-  color: #222; }
-
-p {
+h1, h2, h3, p {
   color: #222; }
 
 /* Header */
@@ -94,6 +91,8 @@ header {
       margin-left: 20px; }
 
 /* Posts */
+article.post h3 {
+  margin: 35px 0 0 0; }
 article.post .post-heading {
   overflow: auto; }
   article.post .post-heading .featured-image {
@@ -126,8 +125,6 @@ article.post .post-heading {
     background-color: #bbceee;
     border: 1px solid #9daab8;
     border-radius: 3px; }
-article.post .post-overview h3 {
-  margin: 40px 0 0 0; }
 article.post .post-content .post-demo-instructions ol li {
   margin: 0 0 10px 0; }
   article.post .post-content .post-demo-instructions ol li code {
@@ -138,6 +135,8 @@ article.post .post-content .post-demo-instructions ol li {
     border: 1px solid #aebdcc;
     border-radius: 4px;
     font-family: Courier; }
+article.post .post-content .post-starts ul li a {
+  color: #426dff; }
 
 /* Footer */
 footer {

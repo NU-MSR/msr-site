@@ -19,8 +19,8 @@ demo-instructions:  ["Make sure 'Enable Networking' is unchecked in the networki
                     ["In Google Chrome, navigate to the local html page", "file:///home/puppeteer/jons_stuff/catkin_ws/src/robot_web_tools/src/index.html"],
                     ["To see Baxter's left hand camera stream, run the startcamera script in a new terminal", "$rosrun robot_web_tools startcamera.py"]]
 places-to-start:    [["Robot Web Tools", "http://robotwebtools.org/"],
-                     ["Basic ROS functionality with roslibjs", "http://wiki.ros.org/roslibjs/Tutorials/BasicRosFunctionality"],
-                     ["MJPEG Single stream canvas example", "http://wiki.ros.org/mjpegcanvasjs/Tutorials/CreatingASingleStreamCanvas"]
+                     ["Basic ROS functionality with roslibjs example", "http://wiki.ros.org/roslibjs/Tutorials/BasicRosFunctionality"],
+                     ["MJPEG Single stream canvas example", "http://wiki.ros.org/mjpegcanvasjs/Tutorials/CreatingASingleStreamCanvas"]]
 ---
 
 

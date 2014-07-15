@@ -25,11 +25,7 @@ html, body {
 		}
 	}
 }
-
-h1, h2, h3 {
-	color: #222;
-}
-p {
+h1, h2, h3, p {
 	color: #222;
 }
 
@@ -151,6 +147,9 @@ header {
 
 /* Posts */
 article.post {
+	h3 {
+		margin: 35px 0 0 0;
+	}
 	.post-heading {
 		overflow: auto;
 
@@ -195,12 +194,6 @@ article.post {
 			}
 		}
 	}
-	.post-overview {
-
-		h3 {
-			margin: 40px 0 0 0 ;
-		}
-	}
 	.post-content {
 
 		.post-demo-instructions {
@@ -218,6 +211,17 @@ article.post {
 						border: 1px solid #aebdcc;
 						border-radius: 4px;
 						font-family: Courier;
+					}
+				}
+			}
+		}
+		.post-starts {
+			ul {
+
+				li {
+
+					a {
+						color: #426dff;
 					}
 				}
 			}
