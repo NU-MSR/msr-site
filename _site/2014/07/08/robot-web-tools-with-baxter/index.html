@@ -61,6 +61,8 @@
 									
 										<li>Rethink Robotics Baxter robot</li>
 									
+										<li>Properly configured workspace for Baxter robot</li>
+									
 								</ul>
 							</div>
 
@@ -101,7 +103,7 @@
 									
 										
 											<li>
-												In a new terminal, run the baxter setup script (assuming it's properly configured)
+												In a new terminal, run the baxter setup script (assuming it's properly configured) that is located in the root directory of your ros workspace
 												<code>$ ./baxter.sh</code>
 											</li>
 										
@@ -125,7 +127,7 @@
 									
 										
 											<li>
-												In a new terminal, launch a mjpeg server
+												In a new terminal, start a mjpeg server
 												<code>$ rosrun mjpeg_server mjpeg_server</code>
 											</li>
 										
@@ -133,15 +135,15 @@
 									
 										
 											<li>
-												In Google Chrome, navigate to the local html page
-												<code>file:///home/puppeteer/jons_stuff/catkin_ws/src/robot_web_tools/src/index.html</code>
+												In Google Chrome, navigate to the index html page from the demo repository
+												<code>file:///path/to/file/index.html</code>
 											</li>
 										
 
 									
 										
 											<li>
-												To see Baxter's left hand camera stream, run the startcamera script in a new terminal
+												To see Baxter's left hand camera stream, in a new terminal, run the startcamera script
 												<code>$rosrun robot_web_tools startcamera.py</code>
 											</li>
 										
