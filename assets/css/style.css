@@ -136,7 +136,8 @@ article.post .post-content .post-demo-instructions ol li {
     border-radius: 4px;
     font-family: Courier; }
 article.post .post-content .post-starts ul li a {
-  color: #426dff; }
+  color: #426dff;
+  text-decoration: none; }
 
 /* Footer */
 footer {

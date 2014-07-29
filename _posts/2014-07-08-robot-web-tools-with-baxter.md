@@ -13,7 +13,7 @@ overview:           In this project, you will demonstrate the capabilities of Ro
 demo-instructions:  ["Make sure 'Enable Networking' is unchecked in the networking menu of your computer",
                      "Ensure that Baxter's ethernet cable is connected to your computer",
                     ["Open up a terminal and run Avahi's network address configuration daemon", "$ sudo avahi-autoipd eth0"],
-                    ["In a new terminal, run the baxter setup script (assuming it's properly configured) that is located in the root directory of your ros workspace", "$ ./baxter.sh"],
+                    ["In a new terminal, run the Baxter setup script (assuming it's properly configured) that is located in the root directory of your ROS workspace", "$ ./baxter.sh"],
                     ["Start roscore", "$ roscore"],
                     ["In a new terminal, launch a rosbridge server", "$ roslaunch rosbridge_server rosbridge_websocket.launch"],
                     ["In a new terminal, start a mjpeg server", "$ rosrun mjpeg_server mjpeg_server"],
