@@ -42,9 +42,9 @@
 
 						<section class="post-heading">
 
-							<img class="featured-image" src="/assets/img/robot-web-tools.jpg">
-							<h1 class="post-title">Robot Web Tools with Baxter</h1>
-							<a class="post-demo" target="_blank" href="https://github.com/jonrovira/robot_web_tools">
+							<img class="featured-image" src="/assets/img/baxter-pick-place2.jpg">
+							<h1 class="post-title">Pick and Place Baxter Demo</h1>
+							<a class="post-demo" target="_blank" href="https://github.com/jonrovira/baxter_work">
 								<span>Check out the demo</span>
 								<i class="fa fa-github"></i>
 							</a>
@@ -53,11 +53,7 @@
 								<h4>Requirements</h4>
 								<ul>
 									
-										<li>ros-hydro-ros-base (basic ROS installation)</li>
-									
-										<li>ros-hydro-rosbridge-server (rosbridge_server)</li>
-									
-										<li>mjpeg_server</li>
+										<li>OpenCV ROS package (cv2 and CvBridge)</li>
 									
 										<li>Rethink Robotics Baxter robot</li>
 									
@@ -70,7 +66,7 @@
 
 						<section class="post-overview">
 							<h3>Overview</h3>
-							<p>In this project, you will demonstrate the capabilities of Robot Web Tools, particularly when interfacing it with Rethink Robotics' Baxter robot. The included demo contains code to publish  a simple message to a ROS Topic, stream one of Baxter's camera feeds, and control Baxter's left arm, all via a web browser.</p>
+							<p>In this project, you will use OpenCV to detect an object in Baxter's workspace and implement motion and grasp planning to manipulate one of Baxter's arms to grasp the object.</p>
 						</section>
 
 						<section class="post-content">
@@ -111,40 +107,8 @@
 									
 										
 											<li>
-												Start roscore
-												<code>$ roscore</code>
-											</li>
-										
-
-									
-										
-											<li>
-												In a new terminal, launch a rosbridge server
-												<code>$ roslaunch rosbridge_server rosbridge_websocket.launch</code>
-											</li>
-										
-
-									
-										
-											<li>
-												In a new terminal, start a mjpeg server
-												<code>$ rosrun mjpeg_server mjpeg_server</code>
-											</li>
-										
-
-									
-										
-											<li>
-												In Google Chrome, navigate to the index html page from the demo repository
-												<code>file:///path/to/file/index.html</code>
-											</li>
-										
-
-									
-										
-											<li>
-												To see Baxter's left hand camera stream, in a new terminal, run the startcamera script
-												<code>$rosrun robot_web_tools startcamera.py</code>
+												Run the demo
+												<code>$ roslaunch 'pkg_name' pick_and_place.launch</code>
 											</li>
 										
 
@@ -158,21 +122,14 @@
 									
 										
 											<li>
-												<a href="http://robotwebtools.org/">Robot Web Tools</a>
+												<a href="opencv-srf.blogspot.ro/2010/09/object-detection-using-color-seperation.html">Thresholding images by color example</a>
 											</li>
 										
 
 									
 										
 											<li>
-												<a href="http://wiki.ros.org/roslibjs/Tutorials/BasicRosFunctionality">Basic ROS functionality with roslibjs example</a>
-											</li>
-										
-
-									
-										
-											<li>
-												<a href="http://wiki.ros.org/mjpegcanvasjs/Tutorials/CreatingASingleStreamCanvas">MJPEG Single stream canvas example</a>
+												<a href="sdk.rethinkrobotics.com/wiki/Worked_Example_Visual_Servoing">Worked Example of Visual Servoing</a>
 											</li>
 										
 
