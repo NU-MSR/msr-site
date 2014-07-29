@@ -1,6 +1,6 @@
 ---
-layout:            pose
-image:             /assets/img/baxter-pick-place.jpg
+layout:            post
+image:             /assets/img/baxter-pick-place2.jpg
 title:             Pick and Place Baxter Demo
 demo:              https://github.com/jonrovira/baxter_work
 requirements:      [OpenCV ROS package (cv2 and CvBridge),
