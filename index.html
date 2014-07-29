@@ -12,7 +12,7 @@ title: Home
 		<ul>
 			{% for post in site.posts limit: 4 %}
 				<li>
-					<a href="{{ post.url }}">
+					<a href="{{ site.baseurl }}{{ post.url }}">
 						<img src="{{ site.baseurl }}{{ post.image }}">
 						<h1>{{ post.title }}</h1>
 					</a>
