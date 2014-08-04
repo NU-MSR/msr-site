@@ -6,10 +6,8 @@ demo:              https://github.com/jonrovira/baxter_work
 requirements:      [OpenCV ROS package (cv2 and CvBridge),
                    Rethink Robotics Baxter robot,
                    Properly configured workspace for Baxter robot]
-overview:          In this project, you will use OpenCV to detect an object in Baxter's
-                   workspace
-                   and implement motion and grasp planning to manipulate one of Baxter's arms to
-                   grasp the object.
+overview:          Use OpenCV to detect an object in Baxter's workspace and implement
+                   motion and graps planning to manipulate one of Baxter's arms to grasp the object.
 demo-instructions: ["Make sure 'Enable Networking' is unchecked in the networking menu of your
                    computer",
                    "Ensure that Baxter's ethernet cable is connected to your computer",
