@@ -1,6 +1,6 @@
 ---
 layout:             post
-image:              /assets/img/baxter-in-gazebo.jpg
+image:              /assets/img/baxter-in-gazebo.png
 title:              Baxter in Gazebo
 demo:               ""
 requirements:       [python-wstool,
