@@ -8,8 +8,8 @@ requirements:       [ros-hydro-ros-base (basic ROS installation),
                     mjpeg_server,
                     Rethink Robotics Baxter robot,
                     Properly configured workspace for Baxter robot]
-overview:           In this project, you will demonstrate the capabilities of Robot
-                    Web Tools, particularly when interfacing it with Rethink Robotics' Baxter robot. The included demo contains code to publish  a simple message to a ROS Topic, stream one of Baxter's camera feeds, and control Baxter's left arm, all via a web browser.
+overview:           Demonstrate the capabilities of Robot Web Tools, particularly when 
+                    interfacing it with Rethink Robotics' Baxter robot. The included demo contains code to publish a simple message to a ROS Topic, stream one of Baxter's camera feeds, and control Baxter's left arm, al via a web browser.
 demo-instructions:  ["Make sure 'Enable Networking' is unchecked in the networking menu of your computer",
                      "Ensure that Baxter's ethernet cable is connected to your computer",
                     ["Open up a terminal and run Avahi's network address configuration daemon", "$ sudo avahi-autoipd eth0"],
