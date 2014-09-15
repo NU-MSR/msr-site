@@ -1,0 +1,42 @@
+---
+layout: default
+title: Resources
+---
+
+<main id="resources">
+
+	<section id="tags-list">
+		<h2>Tags</h2>
+		<ul>
+			<li>All</li>
+			{% for tag in site.collections.resources.tags %}
+				<li>{{ tag | capitalize }}</li>
+			{% endfor %}
+		</ul>
+	</section>
+
+	<section id="resources-list">
+		<h2>Resources</h2>
+		<ul>
+			{% for resource in site.resources %}
+				<li>
+					<a href="{{ site.baseurl }}{{ resources.url }}">
+						{{ resource.title }}
+					</a>
+				</li>
+			{% endfor %}
+		</ul>
+	</section>
+
+
+	{% capture resources_tags %}{% for tag in site.collections.resources.tags %}{{ tag | first }}{% unless forloop.last %},{% endunless %}{% endfor %}{% endcapture %}
+	{% assign tag_words = resources_tags | split:',' | sort %}
+
+	{% for item in (0..site.collections.resources.tags.size) %}{% unless forloop.last %}
+		{% capture this_word %}{{ tag_words[item] | strip_newlines }}{% endcapture %}
+	    	<li>
+	    		{{ this_word }} <span>{{ site.collections.resources.tags[this_word].size }}</span>
+	    	</li>
+	{% endunless %}{% endfor %}
+
+</main>

@@ -2,22 +2,72 @@
 layout: default
 title: Home
 ---
-<div class="page" id="home">
-	<h1>{{ page.title }}</h1>
 
+<main id="home">
 
 	<section id="recent-projects">
-		<h3>Recent Projects</h3>
+		<h2>Recent Projects</h2>
+		<button class="see-all"><a href="{{ site.baseurl }}/projects/">See all</a></button>
+		<div id="slider-wrapper">
+			<ul>
+				{% for project in site.projects limit: 4 %}
+					<li>
+						<a href="{{ site.baseurl }}{{ project.url }}">
+							<img src="http://unsplash.it/1130/400?random">
+							<h2>{{ project.title }}</h2>
+							<p>{{ project.overview | truncatewords: 18 }}</p>
+						</a>
+					</li>
+				{% endfor %}
+			</ul>
+			<button id="slider-prev"><i class="fa fa-caret-left"></i></button>
+			<button id="slider-next"><i class="fa fa-caret-right"></i></button>
+			<div id="slider-info">
+				<h2 class="slider-title"></h2>
+				<p class="slider-content"></p>
+			</div>
+		</div>
+	</section>
+	
+	<hr>
 
+	<section id="students">
+		<h2>Students</h2>
+		<button class="see-all"><a href="{{ site.baseurl }}/students/?class_year=all">See all</a></button>
 		<ul>
-			{% for post in site.posts limit: 4 %}
+			{% for student in site.students limit: 4 %}
 				<li>
-					<a href="{{ post.url }}">
-						<img src="{{ post.image }}">
-						<h1>{{ post.title }}</h1>
-					</a>
+					<img src="http://unsplash.it/200?random">
+					<div class="student-info">
+						<a href="{{ site.baseurl }}/students/#{{ student.first_name }}-{{ student.last_name }}"><h2>{{ student.name }}</h2></a>
+						<h3>Class of {{ student.class_year }}</h3>
+						<h3 class="student-focuses">Focuses: {{ student.focus }}</h3>
+						<h3 class="student-website">Website: <a target="_blank" href="{{ student.website }}">{{ student.website }}</a></h3>
+					</div>
 				</li>
 			{% endfor %}
-		</ul> 
+		</ul>
 	</section>
-</div>
+
+	<hr>
+
+	<section id="recent-resource">
+		<h2>Recent Resources Post</h2>
+		<button class="see-all"><a href="{{ site.baseurl }}/resources/">Go to Resources</a></button>
+		<div id="resource-content">
+			{% for resource in site.resources limit: 1 %}
+				<a href="{{ site.baseurl }}{{ resource.url }}">
+					<img src="http://unsplash.it/350?random">
+					<div class="resource-info">
+						<h3 class="resource-date">{{ resource.date }}</h3>
+						<h2 class="resource-title">{{ resource.title }}</h2>
+						<h3 class="resource-author">Written by {{ resource.author }}</h3>
+						<h4 class="resource-tags">Tags: {{ resource.tags }}</h4>
+						<p class="resource-content">{{ resource.content | truncatewords: 150 }}</p>
+					</div>
+				</a>
+			{% endfor %}
+		</div>
+	</section>
+
+</main>
