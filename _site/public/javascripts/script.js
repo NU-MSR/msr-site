@@ -111,6 +111,44 @@ var editURLText = function($selection) {
 
 	return;
 };
+// Alphabetize a list of strings
+var alphabetizeList = function($list) {
+	var unalphabetized = [];
+	var alphabetized = [];
+
+	// Get list of unalphabetized strings
+	$list.children('li').each(function() {
+		unalphabetized.push($(this).html());
+	});
+
+	// Alphabetize that list
+	alphabetized = unalphabetized.sort();
+
+	// Replace the DOM html with the alphabetized slist
+	var count = 0;
+	$list.children('li').each(function() {
+		$(this).html(alphabetized[count]);
+		count += 1;
+	});
+
+	// Show the previously hidden list
+	$list.show();
+};
+// Check which page is currently loaded
+var checkWhichPage = function() {
+	var mainId = $('main').attr('id');
+	return mainId;
+};
+// Toggle the color of the tag element
+var toggleTagColor = function($tag) {
+	if( $tag.attr('id') != 'all-tag') {
+		$('section#tags-list ul li#all-tag').removeClass('clicked');
+		$tag.toggleClass('clicked');
+		return;
+	}
+	$('section#tags-list ul li#all-tag').addClass('clicked');
+	$('section#tags-list ul li:not(#all-tag)').removeClass('clicked');
+};
 
 
 
@@ -129,23 +167,41 @@ var maxScrollPosition;
 
 $(window).load(function() {
 
-	initializeSliderState()
-	initializeClassSelectButtons();
+	var page = checkWhichPage();
+	switch( page ) {
+		case 'home':
+			initializeSliderState();
 
-	// Handle previous slider button click
-	$('button#slider-prev').click(function() {
-		var $target = $('div#slider-wrapper ul li.active').prev();
-		toGalleryItem($target, maxScrollPosition);
-	});
-	// Handle next slider button click
-	$('button#slider-next').click(function() {
-		var $target = $('div#slider-wrapper ul li.active').next();
-		toGalleryItem($target, maxScrollPosition);
-	});
-	// Handle class year select on students page
-	$('ul#class-select-list li button').click(function() {
-		var $selection = $(this);
-		editURLText($selection);
-		showStudents($selection);
-	});
+			// Handle previous slider button click
+			$('button#slider-prev').click(function() {
+				var $target = $('div#slider-wrapper ul li.active').prev();
+				toGalleryItem($target, maxScrollPosition);
+			});
+			// Handle next slider button click
+			$('button#slider-next').click(function() {
+				var $target = $('div#slider-wrapper ul li.active').next();
+				toGalleryItem($target, maxScrollPosition);
+			});
+			break;
+
+		case 'students':
+			initializeClassSelectButtons();
+
+			// Handle class year select on students page
+			$('ul#class-select-list li button').click(function() {
+				var $selection = $(this);
+				editURLText($selection);
+				showStudents($selection);
+			});
+			break;
+
+		case 'resources':
+			alphabetizeList($('section#tags-list ul'));
+			$('section#tags-list ul').prepend('<li id="all-tag" class="clicked">All</li>');
+
+			$('section#tags-list ul li').click(function() {
+				toggleTagColor($(this));
+			});
+			break;
+	}
 });
