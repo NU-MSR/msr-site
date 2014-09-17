@@ -69,7 +69,7 @@ localhost:4000/msr-site/
 |-- students.html (students landing page of the site)
 ```
 
-## A More detailed explanation, more on how Jekyll works
+## More on how Jekyll works
 
 ### The Jekyll Engine
 First, if you look inside the _site directory, you'll see that no directories or files there begin with an underscore (_). These files are the end result of Jekyll's processing engine. All of the files and directories in the root directory of the repository that do begin with an underscore are "raw". They either include markup that will be included within pages of the final site or they contain markdown and "Front Matter" (which I'll explain later) that will be converted into markup by Jekyll's engine. One of the two commands that you need to run in order to host the site on a local server, "jekyll build --watch", runs that engine, processing and reprocessing the "raw" files every time you make an edit to a file. The files and directories in the root directory of the repository that _don't_ begin with an underscore are ignored by Jekyll and will remain the exact same in the _site directory.
