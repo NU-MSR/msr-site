@@ -154,7 +154,7 @@ This file represents a student in the students collection and only contains YAML
 	</ul>
 </section>
 ```
-The ```{% %}``` tags represent liquid syntax and is processed by Jekyll to render static HTML in the final site.
+The ```{% %}``` tags represent liquid syntax and their contents are processed by Jekyll to render static HTML in the final site. You can see that all of the students in the students collection can be referenced with ```site.students``` and iterated through with a for loop. In this specific for loop, for each student in the students collection, we pull their name, class year, academic focus, website address, and summary using ```{{ }}``` tags. All of a particular student's information is defined in the markdown file just like Jon's which we saw above. You can find more useful information about collections in Jekyll's website (http://jekyllrb.com/docs/collections/).
 
 
 
