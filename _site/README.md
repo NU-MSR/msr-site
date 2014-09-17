@@ -33,29 +33,29 @@ localhost:4000/msr-site/
 ```
 |-- README.md (this)
 |-- _config.yml (overall configuration file for the site)
-|-- _includes (contains all the markup partials)
+|-- _includes (all the markup partials)
 |   |-- footer.html
 |   |-- head.html
 |   |-- header.html
-|-- _layouts (contains page markup templates)
+|-- _layouts (page markup templates)
 |   |-- default.html
 |   |-- post.html
 |   |-- project.html
-|-- _projects (contains markdown files that make up the "projects" jekyll collection)
+|-- _projects (markdown files that make up the "projects" jekyll collection)
 |   |-- baxter-in-gazebo.md
 |   |-- pick-and-place-demo.md
 |   |-- robot-web-tools-with-baxter.md
-|-- _resources (contains markdown files that make up the "resources" jekyll collection)
+|-- _resources (markdown files that make up the "resources" jekyll collection)
 |   |-- baxter.md
 |   |-- rtt.md
-|-- _site (contains the entire site after it is processed by Jekyll)
+|-- _site (the entire site after it is processed by Jekyll)
 |   |-- README.md
 |   |-- index.html
 |   |-- projects
 |   |-- public
 |   |-- resources
 |   |-- students
-|-- _students (contains markdown files, organized by class year, that makes up the "students" jekyll collection)
+|-- _students (markdown files, organized by class year, that make up the "students" jekyll collection)
 |   |-- 2011
 |   |   |-- todd.md
 |   |-- 2012
@@ -66,7 +66,7 @@ localhost:4000/msr-site/
 |   |   |-- kevin.md
 |-- index.html (home page of the site)
 |-- projects.html (projects landing page of the site)
-|-- public (contains static content including fonts, images, js, and css files)
+|-- public (static content including fonts, images, js, and css files)
 |   |-- fonts
 |   |-- images
 |   |-- javascripts
