@@ -1,5 +1,7 @@
 # Master of Science in Robotics Site
 
+
+
 ## Jekyll Overview
 
 ### Built with Jekyll
@@ -24,6 +26,8 @@ View the site in your browser at
 ```
 localhost:4000/msr-site/
 ```
+
+
 
 ## File structure (as of 9/17/14)
 ```
@@ -71,6 +75,8 @@ localhost:4000/msr-site/
 |-- students.html (students landing page of the site)
 ```
 
+
+
 ## More on how Jekyll works
 
 ### The Jekyll Engine
@@ -81,7 +87,7 @@ jekyll build --watch
 runs that engine, processing and reprocessing the "raw" files every time you make a change to a file. The files and directories in the root directory of the repository that _don't_ begin with an underscore are ignored by Jekyll and will remain the exact same in the _site directory.
 
 ### Front Matter
-Any file that contains a YAML front matter block will be processed by Jekyll as a special file. The front matter must be the first thing in the file and must take the form of valid YAML, set between triple-dashed lines (taken from Jekyll's documentation). Here's a basic example that you'll find in the index.html file:
+Any file that contains a YAML front matter block will be processed by Jekyll as a special file. The front matter must be the first thing in the file and must take the form of valid YAML, set between triple-dashed lines (taken from Jekyll's documentation: http://jekyllrb.com/docs/frontmatter/). Here's a basic example that you'll find in the index.html file:
 ```
 ---
 layout: default
@@ -102,7 +108,53 @@ and that would render as:
 </head>
 ```
 
-
+### Collections
+Collections allow you to define a new type of document that can be somewhat conceptualized as an object type, each having its own unique properties and namespaces. These collections are declared in the _config.yml file:
+```
+collections:
+  projects:
+    output: true
+    permalink: /projects/:path/
+  students:
+    output: false
+    years: [2011, 2012, 2013, 2014]
+  resources:
+    output: true
+    permalink: /resources/:path/
+    tags: [navigation, manipulation, vision, ...
+```
+For this site, we use three collections: projects, students, and resources, the contents of which can each be found in the corresponding directores: _projects, _students, and _resources. Notice that each of these directories begins with an underscore. This is because each file in those directories only contains some combination of markdown and front-matter. Let's look at _students/2013/jon.md as an example:
+```
+---
+name:       Jon Rovira
+first_name: Jon
+last_name:  Rovira
+class_year: 2013
+focus:      neuroscience, robotics
+website:    http://google.com
+summary:    Lorem ipsum dolor sit amet, an qui...
+---
+```
+This file represents a student in the students collection and only contains YAML front matter. You can see how powerful collections are if we take a look at a snippet of students.html:
+```
+<section id="students-list">
+	<ul>
+		{% for student in site.students %}
+			<li id="{{ student.first_name }}-{{ student.last_name }}" class="class-year-{{ student.class_year }}">
+				<img src="http://unsplash.it/500?random">
+				<div class="student-info">
+					<h2 class="student-name">{{ student.name }}</h2>
+					<h3 class="student-year">Class of {{ student.class_year }}</h3>
+					<h3 class="student-focuses">Focuses: {{ student.focus }}</h3>
+					<h3 class="student-website">Website: <a href="{{ student.website }}">{{ student.website }}</a></h3>
+					<p class="student-summary">{{ student.summary }}</p>
+				</div>
+			</li>
+		{% endfor %}
+	</ul>
+</section>
+```
+The ```{% %}``` tags represent liquid syntax and is processed by Jekyll to render static HTML in the final site.
 
 
 
