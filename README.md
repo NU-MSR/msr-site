@@ -55,8 +55,8 @@ localhost:4000/msr-site/
 |   |-- public
 |   |-- resources
 |   |-- students
-|-- _students (markdown files, organized by class year, that make up the "students" jekyll collection)
-|   |-- 2011
+|-- _students (markdown files that make up the "students" jekyll collection)
+|   |-- 2011 (class of 2011)
 |   |   |-- todd.md
 |   |-- 2012
 |   |   |-- jarvis.md
