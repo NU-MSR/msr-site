@@ -74,18 +74,22 @@ localhost:4000/msr-site/
 ## More on how Jekyll works
 
 ### The Jekyll Engine
-First, if you look inside the \_site directory, you'll see that no directories or files there begin with an underscore (\_). These files are the end result of Jekyll's processing engine. All of the files and directories in the root directory of the repository that do begin with an underscore are "raw". They either include markup that will be included within pages of the final site or they contain markdown and "Front Matter" (which I'll explain later) that will be converted into markup by Jekyll's engine. One of the two commands that you need to run in order to host the site on a local server, "jekyll build --watch", runs that engine, processing and reprocessing the "raw" files every time you make an edit to a file. The files and directories in the root directory of the repository that _don't_ begin with an underscore are ignored by Jekyll and will remain the exact same in the _site directory.
+First, if you look inside the \_site directory, you'll see that no directories or files there begin with an underscore (\_). These files are the end result of Jekyll's processing engine. All of the files and directories in the root directory of the repository that do begin with an underscore are "raw". They either include markup that will be included within pages of the final site or they contain markdown and "Front Matter" (which I'll explain later) that will be converted into markup by Jekyll's engine. One of the two commands that you need to run in order to host the site on a local server:
+```
+jekyll build --watch
+``` 
+runs that engine, processing and reprocessing the "raw" files every time you make a change to a file. The files and directories in the root directory of the repository that _don't_ begin with an underscore are ignored by Jekyll and will remain the exact same in the _site directory.
 
 ### Front Matter
-Any file that contains a YAML front matter block will be processed by Jekyll as a special file. The front matter must be the first thing in the file and must take the form of valid YAML set between triple-dashed lines (taken from Jekyll's documentation). Here's a basic example that you'll find in the index.html file:
+Any file that contains a YAML front matter block will be processed by Jekyll as a special file. The front matter must be the first thing in the file and must take the form of valid YAML, set between triple-dashed lines (taken from Jekyll's documentation). Here's a basic example that you'll find in the index.html file:
 ```
 ---
 layout: default
 title: Home
 ---
 ```
-This first item, "layout: default", tells Jekyll to take all of the markup in index.html and plug it into the _layouts/default.html template to take the place of the {{ content }} variable.
-The second item, "title: Home", tells Jekyll to create a variable, page.title, that you can use in the markup of the template. For example, in _layouts/default.html, you could write:
+This first item tells Jekyll to take all of the markup in index.html and plug it into the _layouts/default.html template to take the place of the {{ content }} variable.
+The second item tells Jekyll to create a variable, page.title, that you can use in the markup of the template. For example, in _layouts/default.html, you could write:
 ```
 <head>
 	<title>{{ page.title }}</title>
@@ -94,7 +98,7 @@ The second item, "title: Home", tells Jekyll to create a variable, page.title, t
 and that would render as:
 ```
 <head>
-	<title>Students</title>
+	<title>Home</title>
 </head>
 ```
 
