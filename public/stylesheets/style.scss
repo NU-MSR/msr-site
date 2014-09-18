@@ -603,11 +603,11 @@ html {
 				section#resources-list {
 					width: 100%;
 
-					ul {
+					> ul {
 						width: calc(100% - 250px);
 						list-style: none;
 
-						li {
+						> li {
 							margin-bottom: 10px;
 							padding: 8px 12px;
 							border: 1px solid #ccc;
@@ -628,11 +628,25 @@ html {
 									color: #555;
 								}
 								span {
-									display: block;
+									display: inline-block;
 									margin-top: 5px;
 									font-size: 14px;
 									font-style: italic;
 									color: #555;
+								}
+								ul.resource-tags-list {
+									display: inline-block;
+
+									li.resource-tag {
+										display: inline-block;
+										margin-top: 5px;
+										font-size: 14px;
+										font-style: italic;
+										color: #555;
+									}
+									li.resource-tag:not(:last-child):after {
+										content: ',';
+									}
 								}
 							}
 						}

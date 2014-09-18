@@ -9,7 +9,7 @@ title: Resources
 		<h2>Filter By Tag</h2>
 		<ul>
 			{% for tag in site.collections.resources.tags %}
-				<li>{{ tag | capitalize }}</li>
+				<li>{{ tag | downcase }}</li>
 			{% endfor %}
 		</ul>
 	</section>
@@ -29,7 +29,12 @@ title: Resources
 					<a href="{{ site.baseurl }}{{ resource.url }}">
 						<h2>{{ resource.date }}</h2>
 						<h1>{{ resource.title }}</h1>
-						<span>Tags: {{ resource.tags }}</span>
+						<span>Tags:</span>
+						<ul class="resource-tags-list">
+							{% for tag in resource.tags %}
+								<li class="resource-tag">{{ tag }}</li>
+							{% endfor %}
+						</ul>
 					</a>
 				</li>
 			{% endfor %}

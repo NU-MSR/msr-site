@@ -180,7 +180,7 @@ Adding a resource is simply a matter of creating a .md file with any name in the
 title:   Rapidly Exploring Random Tree (RTT)
 author:  John Smith
 date:    August 8th, 2014
-tags:    algorithms, probabilistic data structures, search
+tags:    [algorithms, probabilistic data structures, search]
 ---
 ```
 After the front matter, just type the content in whichever format you think is appropriate using markdown.

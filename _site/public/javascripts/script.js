@@ -141,13 +141,46 @@ var checkWhichPage = function() {
 };
 // Toggle the color of the tag element
 var toggleTagColor = function($tag) {
-	if( $tag.attr('id') != 'all-tag') {
+	// If the All tag wasn't clicked
+	if( $tag.attr('id') != 'all-tag' ) {
+		// Don't keep All tag clicked
 		$('section#tags-list ul li#all-tag').removeClass('clicked');
+
+		// Toggle clicked
 		$tag.toggleClass('clicked');
+
+		// If no tags are clicked now, click All tag
+		if( $('section#tags-list ul li.clicked').length == 0 ) {
+			$('section#tags-list ul li#all-tag').addClass('clicked');
+		}
 		return;
 	}
+	// Click all tag
 	$('section#tags-list ul li#all-tag').addClass('clicked');
 	$('section#tags-list ul li:not(#all-tag)').removeClass('clicked');
+	return;
+};
+// Logic for showing resource entries based on tag selection
+var processTagSelection = function($tag) {
+	$('section#resources-list > ul > li').hide();
+	var clickedList = [];
+
+	$('section#tags-list ul li.clicked').each(function() {
+		clickedList.push($(this).html());
+	});
+	
+	if(clickedList[0] == 'All') {
+		$('section#resources-list > ul > li').show();
+	}
+
+	$('section#resources-list > ul > li').each(function() {
+		$(this).find('li.resource-tag').each(function() {
+			if( clickedList.indexOf($(this).html()) > -1 ) {
+				$(this).parent().parent().parent().show();
+			}
+		});
+	});
+
 };
 
 
@@ -167,6 +200,7 @@ var maxScrollPosition;
 
 $(window).load(function() {
 
+	// Start event listeners depending on which page is loaded
 	var page = checkWhichPage();
 	switch( page ) {
 		case 'home':
@@ -196,12 +230,16 @@ $(window).load(function() {
 			break;
 
 		case 'resources':
+			// Set up tag list
 			alphabetizeList($('section#tags-list ul'));
 			$('section#tags-list ul').prepend('<li id="all-tag" class="clicked">All</li>');
 
+			// Toggle the tag color when clicked
 			$('section#tags-list ul li').click(function() {
 				toggleTagColor($(this));
+				processTagSelection();
 			});
+
 			break;
 	}
 });

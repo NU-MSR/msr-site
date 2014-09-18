@@ -3,7 +3,7 @@ layout:  resource
 title:   Rapidly Exploring Random Tree (RTT)
 author:  John Smith
 date:    August 8th, 2014
-tags:    algorithms, probabilistic data structures, search
+tags:    [algorithms, probabilistic data structures, search]
 ---
 
 ## Overview
