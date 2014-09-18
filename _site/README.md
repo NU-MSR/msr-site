@@ -18,7 +18,7 @@ In one terminal, build the jekyll site, watching for any changes (run in site ro
 ```
 $  jekyll build --watch
 ```
-In another terminal, serve the built site (run in site root directory)
+In another terminal, start a local server (run in site root directory)
 ```
 $  jekyll serve
 ```
@@ -80,7 +80,7 @@ localhost:4000/msr-site/
 ## More on how Jekyll works
 
 ### The Jekyll Engine
-First, if you look inside the \_site directory, you'll see that no directories or files there begin with an underscore (\_). These files are the end result of Jekyll's processing engine. All of the files and directories in the root directory of the repository that do begin with an underscore are "raw". They either include markup that will be included within pages of the final site or they contain markdown and "Front Matter" (which I'll explain later) that will be converted into markup by Jekyll's engine. One of the two commands that you need to run in order to host the site on a local server:
+First, if you look inside the \_site directory, you'll see that no directories or files there begin with an underscore (\_). The contents of that directory are the end result of Jekyll's processing engine. All of the files and directories in the root directory of the repository that do begin with an underscore, on the other hand, are "raw". They either include markup that will be included within pages of the final site or they contain markdown and "Front Matter" (which I'll explain later) that will be converted into markup by Jekyll's engine. One of the two commands that you need to run in order to host the site on a local server:
 ```
 jekyll build --watch
 ``` 
@@ -94,7 +94,7 @@ layout: default
 title: Home
 ---
 ```
-This first item tells Jekyll to take all of the markup in index.html and plug it into the _layouts/default.html template to take the place of the {{ content }} variable.
+This first item tells Jekyll to take all of the markup in index.html and plug it into the _layouts/default.html template to take the place of the {{ content }} variable found in that template file.
 The second item tells Jekyll to create a variable, page.title, that you can use in the markup of the template. For example, in _layouts/default.html, you could write:
 ```
 <head>
@@ -154,7 +154,7 @@ This file represents a student in the students collection and only contains YAML
 	</ul>
 </section>
 ```
-The ```{% %}``` tags represent liquid syntax and their contents are processed by Jekyll to render static HTML in the final site. You can see that all of the students in the students collection can be referenced with ```site.students``` and iterated through with a for loop. In this specific for loop, for each student in the students collection, we pull their name, class year, academic focus, website address, and summary using ```{{ }}``` tags. All of a particular student's information is defined in the markdown file just like Jon's which we saw above. You can find more useful information about collections in Jekyll's website (http://jekyllrb.com/docs/collections/).
+The ```{% %}``` tags represent liquid syntax and their contents are processed by Jekyll to render static HTML in the final site. You can see that all of the students in the students collection can be referenced with ```site.students``` and iterated through with a for loop. In this specific for loop, for each student in the students collection, we pull their name, class year, academic focus, website address, and summary using ```{{ }}``` tags. All of a particular student's information is defined in their markdown file just like Jon's which we saw above. You can find more useful information about collections in Jekyll's website (http://jekyllrb.com/docs/collections/).
 
 
 
@@ -174,7 +174,7 @@ All anchor tags that point to an address within the site need those href address
 I don't like how this is currently done, so I'll leave it blank and edit it soon
 
 ### Adding Resources
-Adding a project is simply a matter of creating a .md file with any name in the _resources directory and starting that file off with a little bit of front matter in this format (taken from rtt.md):
+Adding a resource is simply a matter of creating a .md file with any name in the _resources directory and starting that file off with a little bit of front matter in this format (taken from rtt.md):
 ```
 ---
 title:   Rapidly Exploring Random Tree (RTT)
@@ -185,8 +185,14 @@ tags:    algorithms, probabilistic data structures, search
 ```
 After the front matter, just type the content in whichever format you think is appropriate using markdown.
 
+In addition to creating the markdown file, you will need to check the _config.yml file under collcetions -> resources -> tags. The line will be a list of tags that looks like this:
+```
+tags: [navigation, manipulation, vision, perception... ]
+```
+If the resource you're adding contains tags that are not currently in the list in _config.yml, add those items at the end of the list. The site will automatically alphabetize them.
+
 ### Adding Students
-In order to add a student, create a .md file with the title being his/her name and place it in the subdirectory of _students that corresponds to his/her class year. For example, Jon Rovira will graduate in 2013 according to his markdown file, so the file should be placed in _students/2013/. The markdown file will only include front matter and should take on the following format:
+In order to add a student, create a .md file with the title being his/her name and place it in the subdirectory of _students that corresponds to his/her class year. For example, according to his markdown file, Jon Rovira will graduate in 2013, so the file should be placed in _students/2013/. The markdown file will only include front matter and should take on the following format:
 ```
 ---
 name:       Jon Rovira
