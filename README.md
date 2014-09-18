@@ -158,3 +158,51 @@ The ```{% %}``` tags represent liquid syntax and their contents are processed by
 
 
 
+## Maintaining the Site
+
+### Hosting
+For now, the MSR site is  located at http://jonrovira.github.io/msr-site/ and hosted on Github Pages, using the gh-pages branch of this repository. Whenever you want to make a change to the site, just push the edits to that branch. Notice the base URL, "/msr-site", which will always be the same as the repository name. This is important and has to be specified in the _config.yml file with the line:
+```
+baseurl: /msr-site
+```
+All anchor tags that point to an address within the site need those href addresses to be prefixed with that base URL, for example in line 11 of _includes/header.html:
+```
+<li><a href="{{ site.baseurl }}/">HOME</a></li>
+```
+
+### Adding Projects
+I don't like how this is currently done, so I'll leave it blank and edit it soon
+
+### Adding Resources
+Adding a project is simply a matter of creating a .md file with any name in the _resources directory and starting that file off with a little bit of front matter in this format (taken from rtt.md):
+```
+---
+title:   Rapidly Exploring Random Tree (RTT)
+author:  John Smith
+date:    August 8th, 2014
+tags:    algorithms, probabilistic data structures, search
+---
+```
+After the front matter, just type the content in whichever format you think is appropriate using markdown.
+
+### Adding Students
+In order to add a student, create a .md file with the title being his/her name and place it in the subdirectory of _students that corresponds to his/her class year. For example, Jon Rovira will graduate in 2013 according to his markdown file, so the file should be placed in _students/2013/. The markdown file will only include front matter and should take on the following format:
+```
+---
+name:       Jon Rovira
+first_name: Jon
+last_name:  Rovira
+class_year: 2013
+focus:      neuroscience, robotics
+website:    http://google.com
+summary:    Lorem ipsum dolor sit amet, an qui referrentur efficiantur. At purto audiam vel, te quod appellantur mei. Vel dolorem luptatum eu, persius dolorum delicatissimi et pri. Vidit option ei duo, soleat laoreet legendos sit ex. Eam et velit debet, nam facer perpetua quaerendum id, possim invenire oportere et vix. Pri ea putent honestatis, ei alii pericula eam. In eius tamquam vim, harum congue vel in.
+---
+```
+
+
+
+
+
+
+
+
