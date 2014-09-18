@@ -140,7 +140,7 @@ var checkWhichPage = function() {
 	return mainId;
 };
 // Toggle the color of the tag element
-var toggleTagColor = function($tag) {
+var toggleTag = function($tag) {
 	// If the All tag wasn't clicked
 	if( $tag.attr('id') != 'all-tag' ) {
 		// Don't keep All tag clicked
@@ -161,28 +161,53 @@ var toggleTagColor = function($tag) {
 	return;
 };
 // Logic for showing resource entries based on tag selection
-var processTagSelection = function($tag) {
+var filterByTag = function($tag) {
+	// Hide all
 	$('section#resources-list > ul > li').hide();
 	var clickedList = [];
 
+	// Get list of selected tags
 	$('section#tags-list ul li.clicked').each(function() {
 		clickedList.push($(this).html());
 	});
 	
+	// If All tag is selected, show all
 	if(clickedList[0] == 'All') {
 		$('section#resources-list > ul > li').show();
 	}
 
+	// Cycle through each resource
 	$('section#resources-list > ul > li').each(function() {
+
+		// Cycle through each resource's tags
 		$(this).find('li.resource-tag').each(function() {
+
+			// If there's one that matches a selected tag, show that resource
 			if( clickedList.indexOf($(this).html()) > -1 ) {
 				$(this).parent().parent().parent().show();
 			}
 		});
 	});
-
 };
+// Search for resources from search bar input
+var searchByTitle = function(search) {
+	if( search.length > 0 ) {
+		// Hide all
+		$('section#resources-list > ul > li').hide();
 
+		// Cycle through each resource
+		$('section#resources-list > ul > li').each(function() {
+
+			// Cycle through each resource's tags
+			if( $(this).find('h1.resource-title').html().toLowerCase().indexOf(search.toLowerCase()) > -1 ) {
+				$(this).show();
+			}
+		});
+	}
+	else {
+		$('section#resources-list > ul > li').show();
+	}
+};
 
 
 
@@ -221,7 +246,7 @@ $(window).load(function() {
 		case 'students':
 			initializeClassSelectButtons();
 
-			// Handle class year select on students page
+			// Handle class year button click
 			$('ul#class-select-list li button').click(function() {
 				var $selection = $(this);
 				editURLText($selection);
@@ -234,10 +259,15 @@ $(window).load(function() {
 			alphabetizeList($('section#tags-list ul'));
 			$('section#tags-list ul').prepend('<li id="all-tag" class="clicked">All</li>');
 
-			// Toggle the tag color when clicked
+			// Handle tag click: toggle tag selection, implement tag filtering
 			$('section#tags-list ul li').click(function() {
-				toggleTagColor($(this));
-				processTagSelection();
+				toggleTag($(this));
+				filterByTag();
+			});
+
+			// Handle search input entering: implement searching through resources
+			$('section#resources-search form button').click(function() {
+				searchByTitle($('section#resources-search form input').val());
 			});
 
 			break;

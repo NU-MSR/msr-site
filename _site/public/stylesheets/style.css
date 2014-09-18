@@ -367,15 +367,15 @@ html {
           background-color: #fff;
           box-shadow: 0 0 1px rgba(0, 0, 0, 0.8) inset; }
         html body #wrapper main#resources section#resources-search form input::-webkit-input-placeholder {
-          color: #888;
+          color: #666;
           font-weight: normal;
           font-style: italic; }
         html body #wrapper main#resources section#resources-search form input:-moz-placeholder {
-          color: #888;
+          color: #666;
           font-weight: normal;
           font-style: italic; }
         html body #wrapper main#resources section#resources-search form input:-ms-input-placeholder {
-          color: #888;
+          color: #666;
           font-weight: normal;
           font-style: italic; }
         html body #wrapper main#resources section#resources-search form button {
@@ -425,14 +425,14 @@ html {
             html body #wrapper main#resources section#resources-list > ul > li a {
               text-decoration: none;
               color: inherit; }
-              html body #wrapper main#resources section#resources-list > ul > li a h1 {
-                margin-bottom: 3px;
-                font-size: 15px; }
-              html body #wrapper main#resources section#resources-list > ul > li a h2 {
+              html body #wrapper main#resources section#resources-list > ul > li a h2.resource-date {
                 float: right;
                 font-size: 14px;
                 font-weight: normal;
                 color: #555; }
+              html body #wrapper main#resources section#resources-list > ul > li a h1.resource-title {
+                margin-bottom: 3px;
+                font-size: 15px; }
               html body #wrapper main#resources section#resources-list > ul > li a span {
                 display: inline-block;
                 margin-top: 5px;

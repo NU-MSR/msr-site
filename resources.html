@@ -16,8 +16,8 @@ title: Resources
 
 	<section id="resources-search">
 		<h2>Resources</h2>
-		<form>
-			<input type="text" placeholder="Search here..." required>
+		<form onsubmit="return false;">
+			<input type="text" placeholder="Search by title...">
 			<button type="submit">Search</button>
 		</form>
 	</section>
@@ -27,8 +27,8 @@ title: Resources
 			{% for resource in site.resources %}
 				<li>
 					<a href="{{ site.baseurl }}{{ resource.url }}">
-						<h2>{{ resource.date }}</h2>
-						<h1>{{ resource.title }}</h1>
+						<h2 class="resource-date">{{ resource.date }}</h2>
+						<h1 class="resource-title">{{ resource.title }}</h1>
 						<span>Tags:</span>
 						<ul class="resource-tags-list">
 							{% for tag in resource.tags %}

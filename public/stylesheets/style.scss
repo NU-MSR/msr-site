@@ -543,17 +543,17 @@ html {
 							box-shadow: 0 0 1px rgba(0, 0, 0, 0.8) inset;
 						}
 						input::-webkit-input-placeholder {
-							color: #888;
+							color: #666;
 							font-weight: normal;
 							font-style: italic;
 						}
 						input:-moz-placeholder {
-						    color: #888;
+						    color: #666;
 						    font-weight: normal;
 						    font-style: italic;
 						}
 						input:-ms-input-placeholder {
-						    color: #888;
+						    color: #666;
 						    font-weight: normal;
 						    font-style: italic;
 						}
@@ -617,15 +617,15 @@ html {
 								text-decoration: none;
 								color: inherit;
 
-								h1 {
-									margin-bottom: 3px;
-									font-size: 15px;
-								}
-								h2 {
+								h2.resource-date {
 									float: right;
 									font-size: 14px;
 									font-weight: normal;
 									color: #555;
+								}
+								h1.resource-title {
+									margin-bottom: 3px;
+									font-size: 15px;
 								}
 								span {
 									display: inline-block;
