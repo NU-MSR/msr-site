@@ -1,4 +1,5 @@
 ---
+layout:  resource
 title:   Something Interesting
 author:  John Smith
 date:    August 8th, 2014
