@@ -17,12 +17,7 @@ title: Resources
 	<section id="resources-search">
 		<h2>Resources</h2>
 		<form onsubmit="return false;">
-			<button id="search-by" class="search-button">By title<i class="fa fa-caret-down"></i></button>
-			<select>
-				<option>By title</option>
-				<option>By content</option>
-			</select>
-			<input id="search-bar" type="text" placeholder="Search here...">
+			<input id="search-bar" type="text" placeholder="Search by title or content">
 			<button id="search-submit" class="search-button" type="submit">Search</button>
 		</form>
 	</section>
@@ -40,6 +35,9 @@ title: Resources
 								<li class="resource-tag">{{ tag }}</li>
 							{% endfor %}
 						</ul>
+						<div class="resource-content">
+							{{ resource.content }}
+						</div>
 					</a>
 				</li>
 			{% endfor %}

@@ -198,9 +198,10 @@ var searchByTitle = function(search) {
 		// Cycle through each resource
 		$('section#resources-list > ul > li').each(function() {
 
-			// Cycle through each resource's tags
-			if( $(this).find('h1.resource-title').html().toLowerCase().indexOf(search.toLowerCase()) > -1 ) {
+			// Check each resource's content for text
+			if( $(this).find('div.resource-content').html().toLowerCase().indexOf(search.toLowerCase()) > -1 ) {
 				$(this).show();
+				console.log('hi');
 			}
 		});
 	}
