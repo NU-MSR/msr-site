@@ -764,49 +764,15 @@ html {
 							font-size: 30px;
 						}
 					}
-					section.project-instructions {
-						margin: 30px 0;
-
-						h2 {
-							font-size: 30px;
-						}
-						ol {
-							padding-left: 35px;
-
-							li {
-								margin: 8px 0;
-
-								code {
-									display: block;
-									margin-top: 5px;
-									padding: 9px 10px;
-									background-color: #f3f57;
-									border: 1px solid #aebdcc;
-									border-radius: 3px;
-									font-family: Courier;
-								}
-							}
-						}
-					}
-					section.project-starts {
-						margin: 30px 0;
-
-						h2 {
-							font-size: 30px;
-						}
-						ul {
-							padding-left: 35px;
-							list-style: none;
-
-							li {
-
-								a {
-									color: #426dff;
-									text-decoration: none;
-								}
-							}
-						}
-
+					section.project-content {
+						
+						h1 { margin: 0.67em 0; font-size: 2em; }
+						h2 { margin: 0.75em 0; }
+						h3 { margin: 0.83em 0; }
+						h3, p, ul, form, ol { margin: 1.12em 0 }
+						h5 { margin: 1.5em 0 }
+						h6 { margin: 1.67em 0 }
+						ol, ul { margin-left: 40px; }
 					}
 				}
 			}
