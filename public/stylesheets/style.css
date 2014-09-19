@@ -351,53 +351,63 @@ html {
       html body #wrapper main#resources section#resources-search form {
         overflow: auto;
         margin-bottom: 20px;
-        width: 400px; }
-        html body #wrapper main#resources section#resources-search form input {
+        width: 485px; }
+        html body #wrapper main#resources section#resources-search form button.search-button {
           float: left;
-          padding: 10px 5px;
+          position: relative;
+          height: 40px;
+          font-style: bold;
+          font-size: 14px/40px;
+          color: #fff;
+          text-transform: uppercase;
+          text-shadow: 0 -1px rgba(0, 0, 0, 0.3);
+          background-color: #60a5fa;
+          border: none;
+          cursor: pointer;
+          outline: none; }
+        html body #wrapper main#resources section#resources-search form button.search-button:hover {
+          background-color: #7DBAFA; }
+        html body #wrapper main#resources section#resources-search form button.search-button:active, html body #wrapper main#resources section#resources-search form button:focus {
+          background-color: #4484FA; }
+        html body #wrapper main#resources section#resources-search form button.search-button::-moz-focus-inner {
+          border: none;
+          padding: 0; }
+        html body #wrapper main#resources section#resources-search form button#search-by {
+          width: 75px;
+          border-radius: 3px 0 0 3px; }
+          html body #wrapper main#resources section#resources-search form button#search-by i {
+            margin-left: 7px; }
+        html body #wrapper main#resources section#resources-search form select {
+          display: none; }
+        html body #wrapper main#resources section#resources-search form input#search-bar {
+          float: left;
+          padding: 10px 8px;
           width: 280px;
           height: 20px;
           font-style: bold;
           font-size: 15px;
           background-color: #eee;
           border: none;
-          border-radius: 3px 0 0 3px;
           outline: none; }
-        html body #wrapper main#resources section#resources-search form input:focus {
+        html body #wrapper main#resources section#resources-search form input#search-bar:focus {
           background-color: #fff;
           box-shadow: 0 0 1px rgba(0, 0, 0, 0.8) inset; }
-        html body #wrapper main#resources section#resources-search form input::-webkit-input-placeholder {
+        html body #wrapper main#resources section#resources-search form input#search-bar::-webkit-input-placeholder {
           color: #666;
           font-weight: normal;
           font-style: italic; }
-        html body #wrapper main#resources section#resources-search form input:-moz-placeholder {
+        html body #wrapper main#resources section#resources-search form input#search-bar:-moz-placeholder {
           color: #666;
           font-weight: normal;
           font-style: italic; }
-        html body #wrapper main#resources section#resources-search form input:-ms-input-placeholder {
+        html body #wrapper main#resources section#resources-search form input#search-bar:-ms-input-placeholder {
           color: #666;
           font-weight: normal;
           font-style: italic; }
-        html body #wrapper main#resources section#resources-search form button {
-          position: relative;
-          float: right;
+        html body #wrapper main#resources section#resources-search form button#search-submit {
           width: 110px;
-          height: 40px;
-          font-style: bold;
-          font-size: 14px/40px;
-          color: #fff;
-          text-transform: uppercase;
-          text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.3);
-          background-color: #60A5FA;
-          border: none;
-          border-radius: 0 3px 3px 0;
-          cursor: pointer;
-          outline: none; }
-        html body #wrapper main#resources section#resources-search form button:hover {
-          background-color: #7DBAFA; }
-        html body #wrapper main#resources section#resources-search form button:active, html body #wrapper main#resources section#resources-search form button:focus {
-          background-color: #4484FA; }
-        html body #wrapper main#resources section#resources-search form button:before {
+          border-radius: 0 3px 3px 0; }
+        html body #wrapper main#resources section#resources-search form button#search-submit:before {
           content: '';
           position: absolute;
           top: 12px;
@@ -405,13 +415,10 @@ html {
           border-width: 8px;
           border-style: solid solid solid none;
           border-color: transparent #60A5FA transparent; }
-        html body #wrapper main#resources section#resources-search form button:hover:before {
+        html body #wrapper main#resources section#resources-search form button#search-submit:hover:before {
           border-right-color: #7DBAFA; }
-        html body #wrapper main#resources section#resources-search form button:focus:before, html body #wrapper main#resources section#resources-search form button:active:before {
+        html body #wrapper main#resources section#resources-search form button#search-submit:focus:before, html body #wrapper main#resources section#resources-search form button#search-submit:active:before {
           border-right-color: #4484FA; }
-        html body #wrapper main#resources section#resources-search form button::-moz-focus-inner {
-          border: none;
-          padding: 0; }
       html body #wrapper main#resources section#resources-list {
         width: 100%; }
         html body #wrapper main#resources section#resources-list > ul {

@@ -17,8 +17,13 @@ title: Resources
 	<section id="resources-search">
 		<h2>Resources</h2>
 		<form onsubmit="return false;">
-			<input type="text" placeholder="Search by title...">
-			<button type="submit">Search</button>
+			<button id="search-by" class="search-button">By title<i class="fa fa-caret-down"></i></button>
+			<select>
+				<option>By title</option>
+				<option>By content</option>
+			</select>
+			<input id="search-bar" type="text" placeholder="Search here...">
+			<button id="search-submit" class="search-button" type="submit">Search</button>
 		</form>
 	</section>
 

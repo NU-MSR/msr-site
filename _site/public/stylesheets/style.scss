@@ -524,62 +524,78 @@ html {
 					form {
 						overflow: auto;
 						margin-bottom: 20px;
-						width: 400px;
+						width: 485px;
 
-						input {
+						button.search-button {
 							float: left;
-							padding: 10px 5px;
+							position: relative;
+							height: 40px;
+							font-style: bold;
+							font-size: 14px/40px;
+							color: #fff;
+							text-transform: uppercase;
+							text-shadow: 0 -1px rgba(0, 0, 0, 0.3);
+							background-color: #60a5fa;
+							border: none;
+							cursor: pointer;
+							outline: none;
+						}
+						button.search-button:hover {
+							background-color: #7DBAFA;
+						}
+						button.search-button:active, button:focus {
+							background-color: #4484FA;
+						}
+						button.search-button::-moz-focus-inner {
+							border: none;
+							padding: 0;
+						}
+						button#search-by {
+							width: 75px;
+							border-radius: 3px 0 0 3px;
+
+							i {
+								margin-left: 7px;
+							}
+						}
+						select {
+							display: none;
+						}
+						input#search-bar {
+							float: left;
+							padding: 10px 8px;
 							width: 280px;
 							height: 20px;
 							font-style: bold;
 							font-size: 15px;
 							background-color: #eee;
 							border: none;
-							border-radius: 3px 0 0 3px;
 							outline: none;
 						}
-						input:focus {
+						input#search-bar:focus {
 							background-color: #fff;
 							box-shadow: 0 0 1px rgba(0, 0, 0, 0.8) inset;
 						}
-						input::-webkit-input-placeholder {
+						input#search-bar::-webkit-input-placeholder {
 							color: #666;
 							font-weight: normal;
 							font-style: italic;
 						}
-						input:-moz-placeholder {
+						input#search-bar:-moz-placeholder {
 						    color: #666;
 						    font-weight: normal;
 						    font-style: italic;
 						}
-						input:-ms-input-placeholder {
+						input#search-bar:-ms-input-placeholder {
 						    color: #666;
 						    font-weight: normal;
 						    font-style: italic;
 						}
-						button {
-							position: relative;
-							float: right;
+						button#search-submit {
 							width: 110px;
-							height: 40px;
-							font-style: bold;
-							font-size: 14px/40px;
-							color: #fff;
-							text-transform: uppercase;
-							text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.3);
-							background-color: #60A5FA;
-							border: none;
 							border-radius: 0 3px 3px 0;
-							cursor: pointer;
-							outline: none;
 						}
-						button:hover {
-							background-color: #7DBAFA;
-						}
-						button:active, button:focus {
-							background-color: #4484FA;
-						}
-						button:before {
+						button#search-submit:before {
 							content: '';
 							position: absolute;
 							top: 12px;
@@ -588,15 +604,11 @@ html {
 							border-style: solid solid solid none;
 							border-color: transparent #60A5FA transparent;
 						}
-						button:hover:before {
+						button#search-submit:hover:before {
 							border-right-color: #7DBAFA;
 						}
-						button:focus:before, button:active:before {
+						button#search-submit:focus:before, button#search-submit:active:before {
 							border-right-color: #4484FA;
-						}
-						button::-moz-focus-inner {
-							border: none;
-							padding: 0;
 						}
 					}
 				}
