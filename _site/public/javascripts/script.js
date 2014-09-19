@@ -162,8 +162,9 @@ var toggleTag = function($tag) {
 };
 // Logic for showing resource entries based on tag selection
 var filterByTag = function($tag) {
-	// Hide all
-	$('section#resources-list > ul > li').hide();
+	// Undo hide class
+	$('section#resources-list > ul > li').removeClass('hidden-by-tags');
+
 	var clickedList = [];
 
 	// Get list of selected tags
@@ -173,40 +174,48 @@ var filterByTag = function($tag) {
 	
 	// If All tag is selected, show all
 	if(clickedList[0] == 'All') {
-		$('section#resources-list > ul > li').show();
+		$('section#resources-list > ul > li').removeClass('hidden-by-tags');
 	}
 
 	// Cycle through each resource
 	$('section#resources-list > ul > li').each(function() {
 
+		
+		// By default, hide resource
+		var show = false;
+
 		// Cycle through each resource's tags
 		$(this).find('li.resource-tag').each(function() {
 
-			// If there's one that matches a selected tag, show that resource
+			// If there's one that matches a selected tag, we need to show the resource
 			if( clickedList.indexOf($(this).html()) > -1 ) {
-				$(this).parent().parent().parent().show();
+				show = true;
 			}
 		});
+
+		// Show the resource if deemed necessary
+		if( !show ) {
+			$(this).addClass('hidden-by-tags');
+		}
 	});
 };
 // Search for resources from search bar input
 var searchByTitle = function(search) {
 	if( search.length > 0 ) {
-		// Hide all
-		$('section#resources-list > ul > li').hide();
+		// Undo hide class
+		$('section#resources-list > ul > li').removeClass('hidden-by-search');
 
 		// Cycle through each resource
 		$('section#resources-list > ul > li').each(function() {
 
-			// Check each resource's content for text
-			if( $(this).find('div.resource-content').html().toLowerCase().indexOf(search.toLowerCase()) > -1 ) {
-				$(this).show();
-				console.log('hi');
+			// If resource doesn't contain string, add hide class
+			if( $(this).find('div.resource-content').html().toLowerCase().indexOf(search.toLowerCase()) <= -1 ) {
+				$(this).addClass('hidden-by-search');
 			}
 		});
 	}
 	else {
-		$('section#resources-list > ul > li').show();
+		filterByTag();
 	}
 };
 

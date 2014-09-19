@@ -654,6 +654,12 @@ html {
 								}
 							}
 						}
+						li.hidden-by-search {
+							display: none;
+						}
+						li.hidden-by-tags {
+							display: none;
+						}
 					}
 				}
 			}
