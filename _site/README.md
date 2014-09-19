@@ -174,7 +174,11 @@ All anchor tags that point to an address within the site need those href address
 I don't like how this is currently done, so I'll leave it blank and edit it soon
 
 ### Adding Resources
-Adding a resource is simply a matter of creating a .md file with any name in the _resources directory and starting that file off with a little bit of front matter in this format (taken from rtt.md):
+Adding a resource is simply a matter of creating a file in the _resources directory with the file name in the following format:
+```
+YEAR-MONTH-DAY-title.md
+```
+You will also need to start that file off with a little bit of front matter in this format (taken from 2014-09-17-rtt.md):
 ```
 ---
 title:   Rapidly Exploring Random Tree (RTT)
