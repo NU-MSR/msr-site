@@ -213,7 +213,7 @@ tags:    [algorithms, probabilistic data structures, search]
 ```
 After the front matter, just type the content in whichever format you think is appropriate using markdown.
 
-In addition to creating the markdown file, you will need to check the _config.yml file under collcetions -> resources -> tags. The line will be a list of tags that looks like this:
+In addition to creating the markdown file, you will need to check the _config.yml file under collections -> resources -> tags. The line will be a list of tags that looks like this:
 ```
 tags: [navigation, manipulation, vision, perception... ]
 ```
