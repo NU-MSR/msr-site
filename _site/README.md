@@ -171,7 +171,31 @@ All anchor tags that point to an address within the site need those href address
 ```
 
 ### Adding Projects
-I don't like how this is currently done, so I'll leave it blank and edit it soon
+To add a project, just create a .md file in the _projects directory with front matter at the beginning that follows this format (taken from baxter-in-gazebo.md):
+```
+---
+layout:             project
+image:              /baxter-in-gazebo2.png
+title:              Baxter in Gazebo
+author:             Jarvis Schultz
+date:               August 29th, 2014
+demo:               https://github.com/jonrovira/ME_495_work
+requirements:       [python-wstool,
+                    python-rosdep,
+                    ros-hydro-pcl-conversions,
+                    ros-hydro-control-msgs,
+                    ros-hydro-cmake-modules,
+                    ros-hydro-qt-build,
+                    ros-hydro-moveit-full,
+                    ros-hydro-driver-common,
+                    ros-hydro-image-common,
+                    ros-hydro-rostest-gazebo,
+                    Baxter Simulation repository (must request access by emailing RSDK.support@rethinkrobotics.com]
+overview:           Learn how to quickly get a Baxter simulation running in Gazebo.
+                    Execute the joint position keyboard example in the simulation.
+---
+```
+Following that front matter, just add content in normal markdown.
 
 ### Adding Resources
 Adding a resource is simply a matter of creating a file in the _resources directory with the file name in the following format:
