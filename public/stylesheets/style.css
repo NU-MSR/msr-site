@@ -290,10 +290,13 @@ html {
           font-size: 12px;
           color: initial; }
           html body #wrapper main#home section#recent-resource div#resource-content a div.resource-info div.resource-text h1 {
+            margin: 10px 0;
             font-size: 13px; }
           html body #wrapper main#home section#recent-resource div#resource-content a div.resource-info div.resource-text h2, html body #wrapper main#home section#recent-resource div#resource-content a div.resource-info div.resource-text h3, html body #wrapper main#home section#recent-resource div#resource-content a div.resource-info div.resource-text h4, html body #wrapper main#home section#recent-resource div#resource-content a div.resource-info div.resource-text h5, html body #wrapper main#home section#recent-resource div#resource-content a div.resource-info div.resource-text h6 {
+            margin: 5px 0;
             font-size: 12px; }
           html body #wrapper main#home section#recent-resource div#resource-content a div.resource-info div.resource-text p {
+            margin: 5px 0;
             font-size: 12px; }
     @media (min-width: 321px) {
       html body #wrapper main#home section#recent-resource div#resource-content a img {
