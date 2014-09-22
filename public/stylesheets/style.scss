@@ -448,9 +448,10 @@ html {
 										content: ',';
 									}
 								}
-								p.resource-text {
+								div.resource-text {
 									margin: 10px 0;
 									font-size: 12px;
+									color: initial;
 
 									h1 {
 										font-size: 13px;
@@ -495,7 +496,7 @@ html {
 									h4.resource-tags {
 										font-size: 14px;
 									}
-									p.resource-text {
+									div.resource-text {
 										margin: 20px 0;
 										font-size: 14px;
 									}

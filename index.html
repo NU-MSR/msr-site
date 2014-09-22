@@ -68,7 +68,9 @@ title: Home
 								<span>{{ tag }}</span>
 							{% endfor %}
 						</h4>
-						<p class="resource-text">{{ resource.content | truncatewords: 100 }}</p>
+						<div class="resource-text">
+							{{ resource.content | truncatewords: 100 }}
+						</div>
 					</div>
 				</a>
 			{% endfor %}

@@ -285,14 +285,15 @@ html {
           font-size: 12px; }
           html body #wrapper main#home section#recent-resource div#resource-content a div.resource-info h4.resource-tags span:not(:last-child):after {
             content: ','; }
-        html body #wrapper main#home section#recent-resource div#resource-content a div.resource-info p.resource-text {
+        html body #wrapper main#home section#recent-resource div#resource-content a div.resource-info div.resource-text {
           margin: 10px 0;
-          font-size: 12px; }
-          html body #wrapper main#home section#recent-resource div#resource-content a div.resource-info p.resource-text h1 {
+          font-size: 12px;
+          color: initial; }
+          html body #wrapper main#home section#recent-resource div#resource-content a div.resource-info div.resource-text h1 {
             font-size: 13px; }
-          html body #wrapper main#home section#recent-resource div#resource-content a div.resource-info p.resource-text h2, html body #wrapper main#home section#recent-resource div#resource-content a div.resource-info p.resource-text h3, html body #wrapper main#home section#recent-resource div#resource-content a div.resource-info p.resource-text h4, html body #wrapper main#home section#recent-resource div#resource-content a div.resource-info p.resource-text h5, html body #wrapper main#home section#recent-resource div#resource-content a div.resource-info p.resource-text h6 {
+          html body #wrapper main#home section#recent-resource div#resource-content a div.resource-info div.resource-text h2, html body #wrapper main#home section#recent-resource div#resource-content a div.resource-info div.resource-text h3, html body #wrapper main#home section#recent-resource div#resource-content a div.resource-info div.resource-text h4, html body #wrapper main#home section#recent-resource div#resource-content a div.resource-info div.resource-text h5, html body #wrapper main#home section#recent-resource div#resource-content a div.resource-info div.resource-text h6 {
             font-size: 12px; }
-          html body #wrapper main#home section#recent-resource div#resource-content a div.resource-info p.resource-text p {
+          html body #wrapper main#home section#recent-resource div#resource-content a div.resource-info div.resource-text p {
             font-size: 12px; }
     @media (min-width: 321px) {
       html body #wrapper main#home section#recent-resource div#resource-content a img {
@@ -311,7 +312,7 @@ html {
           font-size: 14px; }
         html body #wrapper main#home section#recent-resource div#resource-content a div.resource-info h4.resource-tags {
           font-size: 14px; }
-        html body #wrapper main#home section#recent-resource div#resource-content a div.resource-info p.resource-text {
+        html body #wrapper main#home section#recent-resource div#resource-content a div.resource-info div.resource-text {
           margin: 20px 0;
           font-size: 14px; } }
     html body #wrapper main#home hr {
