@@ -317,7 +317,16 @@ html {
           font-size: 14px; }
         html body #wrapper main#home section#recent-resource div#resource-content a div.resource-info div.resource-text {
           margin: 20px 0;
-          font-size: 14px; } }
+          font-size: 14px; }
+          html body #wrapper main#home section#recent-resource div#resource-content a div.resource-info div.resource-text h1 {
+            margin: 15px 0;
+            font-size: 15px; }
+          html body #wrapper main#home section#recent-resource div#resource-content a div.resource-info div.resource-text h2, html body #wrapper main#home section#recent-resource div#resource-content a div.resource-info div.resource-text h3, html body #wrapper main#home section#recent-resource div#resource-content a div.resource-info div.resource-text h4, html body #wrapper main#home section#recent-resource div#resource-content a div.resource-info div.resource-text h5, html body #wrapper main#home section#recent-resource div#resource-content a div.resource-info div.resource-text h6 {
+            margin: 10px 0;
+            font-size: 14px; }
+          html body #wrapper main#home section#recent-resource div#resource-content a div.resource-info div.resource-text p {
+            margin: 10px 0;
+            font-size: 14px; } }
     html body #wrapper main#home hr {
       margin: 30px 0 10px 0;
       height: 1px;
