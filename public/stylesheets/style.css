@@ -288,6 +288,12 @@ html {
         html body #wrapper main#home section#recent-resource div#resource-content a div.resource-info p.resource-text {
           margin: 10px 0;
           font-size: 12px; }
+          html body #wrapper main#home section#recent-resource div#resource-content a div.resource-info p.resource-text h1 {
+            font-size: 13px; }
+          html body #wrapper main#home section#recent-resource div#resource-content a div.resource-info p.resource-text h2, html body #wrapper main#home section#recent-resource div#resource-content a div.resource-info p.resource-text h3, html body #wrapper main#home section#recent-resource div#resource-content a div.resource-info p.resource-text h4, html body #wrapper main#home section#recent-resource div#resource-content a div.resource-info p.resource-text h5, html body #wrapper main#home section#recent-resource div#resource-content a div.resource-info p.resource-text h6 {
+            font-size: 12px; }
+          html body #wrapper main#home section#recent-resource div#resource-content a div.resource-info p.resource-text p {
+            font-size: 12px; }
     @media (min-width: 321px) {
       html body #wrapper main#home section#recent-resource div#resource-content a img {
         display: inline-block;

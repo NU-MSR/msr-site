@@ -451,6 +451,16 @@ html {
 								p.resource-text {
 									margin: 10px 0;
 									font-size: 12px;
+
+									h1 {
+										font-size: 13px;
+									}
+									h2, h3, h4, h5, h6, {
+										font-size: 12px;
+									}
+									p {
+										font-size: 12px;
+									}
 								}
 							}
 						}
