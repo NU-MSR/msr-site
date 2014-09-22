@@ -226,7 +226,7 @@ html {
       html body #wrapper main#home section#students ul li {
         display: inline-block;
         margin-bottom: 20px;
-        width: calc(100% / 2 - 15px);
+        width: 100%;
         border: 1px solid #aaa;
         border-radius: 3px;
         box-shadow: 6px 0px 7px -7px #888888, 0px 6px 7px -7px #888888; }
@@ -236,52 +236,86 @@ html {
           vertical-align: top; }
         html body #wrapper main#home section#students ul li div.student-info {
           display: inline-block;
-          padding: 20px; }
+          padding: 5px; }
           html body #wrapper main#home section#students ul li div.student-info > a {
             text-decoration: none;
             color: #333; }
             html body #wrapper main#home section#students ul li div.student-info > a h2 {
               margin-bottom: 5px;
-              font-size: 14px; }
+              font-size: 12px; }
           html body #wrapper main#home section#students ul li div.student-info > a:hover {
             text-decoration: underline; }
           html body #wrapper main#home section#students ul li div.student-info h3 {
-            font-size: 13px; }
+            font-size: 10px; }
             html body #wrapper main#home section#students ul li div.student-info h3 a {
               color: #333; }
+    @media (min-width: 321px) {
+      html body #wrapper main#home section#students ul li {
+        width: calc(100% / 2 - 15px); }
+        html body #wrapper main#home section#students ul li div.student-info {
+          padding: 20px; }
+          html body #wrapper main#home section#students ul li div.student-info > a h2 {
+            font-size: 14px; }
+          html body #wrapper main#home section#students ul li div.student-info h3 {
+            font-size: 13px; }
       html body #wrapper main#home section#students ul li:nth-child(2n) {
         margin-left: 20px; }
       html body #wrapper main#home section#students ul li:nth-child(3), html body #wrapper main#home section#students ul li:nth-child(4) {
-        margin-bottom: 0; }
+        margin-bottom: 0; } }
     html body #wrapper main#home section#recent-resource div#resource-content a {
       display: block;
       text-decoration: none; }
       html body #wrapper main#home section#recent-resource div#resource-content a img {
-        display: inline-block;
-        width: 30%;
+        width: 100%;
         vertical-align: top; }
       html body #wrapper main#home section#recent-resource div#resource-content a div.resource-info {
         position: relative;
-        padding: 0 0 0 20px;
-        width: 65%;
-        display: inline-block; }
+        margin-top: 10px;
+        width: 100%; }
         html body #wrapper main#home section#recent-resource div#resource-content a div.resource-info h3.resource-date {
-          font-size: 14px;
+          font-size: 12px;
           margin-bottom: 10px; }
+        html body #wrapper main#home section#recent-resource div#resource-content a div.resource-info h2.resource-title {
+          font-size: 18px; }
         html body #wrapper main#home section#recent-resource div#resource-content a div.resource-info h3.resource-author {
-          font-size: 14px;
+          font-size: 12px;
           font-weight: normal; }
         html body #wrapper main#home section#recent-resource div#resource-content a div.resource-info h4.resource-tags {
           font-weight: normal;
+          font-size: 12px; }
+          html body #wrapper main#home section#recent-resource div#resource-content a div.resource-info h4.resource-tags span:not(:last-child):after {
+            content: ','; }
+        html body #wrapper main#home section#recent-resource div#resource-content a div.resource-info p.resource-text {
+          margin: 10px 0;
+          font-size: 12px; }
+    @media (min-width: 321px) {
+      html body #wrapper main#home section#recent-resource div#resource-content a img {
+        display: inline-block;
+        width: 30%; }
+      html body #wrapper main#home section#recent-resource div#resource-content a div.resource-info {
+        display: inline-block;
+        margin-top: 0;
+        padding: 0 0 0 20px;
+        width: 65%; }
+        html body #wrapper main#home section#recent-resource div#resource-content a div.resource-info h3.resource-date {
           font-size: 14px; }
-        html body #wrapper main#home section#recent-resource div#resource-content a div.resource-info p.resource-content {
+        html body #wrapper main#home section#recent-resource div#resource-content a div.resource-info h2.resource-title {
+          font-size: initial; }
+        html body #wrapper main#home section#recent-resource div#resource-content a div.resource-info h3.resource-author {
+          font-size: 14px; }
+        html body #wrapper main#home section#recent-resource div#resource-content a div.resource-info h4.resource-tags {
+          font-size: 14px; }
+        html body #wrapper main#home section#recent-resource div#resource-content a div.resource-info p.resource-text {
           margin: 20px 0;
-          font-size: 14px; }
+          font-size: 14px; } }
     html body #wrapper main#home hr {
-      margin: 50px 0 30px 0;
+      margin: 30px 0 10px 0;
       height: 1px;
       border: 0;
       box-shadow: inset 0 6px 6px -6px #999; }
+    @media (min-width: 321px) {
+      html body #wrapper main#home hr {
+        margin: 50px 0 30px 0; } }
     html body #wrapper main#projects section#projects-list {
       width: 100%; }
       html body #wrapper main#projects section#projects-list > h2 {
@@ -600,16 +634,21 @@ html {
       html body #wrapper footer ul {
         margin: 0 auto;
         padding: 15px 0;
-        width: 65%;
+        width: 90%;
         list-style: none;
         text-align: center; }
         html body #wrapper footer ul li {
           padding: 0 5px;
-          display: inline-block;
           color: #fff;
-          font-size: 14px;
-          border-right: 1px solid #5b3b64; }
-        html body #wrapper footer ul li:last-child {
-          border: none; }
+          font-size: 12px; }
+      @media (min-width: 321px) {
+        html body #wrapper footer ul {
+          width: 65%; }
+          html body #wrapper footer ul li {
+            display: inline-block;
+            font-size: 14px;
+            border-right: 1px solid #5b3b64; }
+          html body #wrapper footer ul li:last-child {
+            border: none; } }
     html body #wrapper h1, html body #wrapper h2, html body #wrapper h3, html body #wrapper h4, html body #wrapper p {
       color: #333; }

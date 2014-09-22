@@ -49,7 +49,7 @@ title: Home
 		</ul>
 	</section>
 
-	<hr>
+	<hr> 
 
 	<section id="recent-resource">
 		<h2>Recent Resources Post</h2>
@@ -62,8 +62,13 @@ title: Home
 						<h3 class="resource-date">{{ resource.date }}</h3>
 						<h2 class="resource-title">{{ resource.title }}</h2>
 						<h3 class="resource-author">Written by {{ resource.author }}</h3>
-						<h4 class="resource-tags">Tags: {{ resource.tags }}</h4>
-						<p class="resource-content">{{ resource.content | truncatewords: 150 }}</p>
+						<h4 class="resource-tags">
+							Tags: 
+							{% for tag in resource.tags %}
+								<span>{{ tag }}</span>
+							{% endfor %}
+						</h4>
+						<p class="resource-text">{{ resource.content | truncatewords: 100 }}</p>
 					</div>
 				</a>
 			{% endfor %}
