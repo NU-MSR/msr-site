@@ -29,18 +29,29 @@ html {
         html body #wrapper header div#header-branding div#header-branding-inner {
           margin: 0 auto;
           padding: 20px 0;
-          width: 65%; }
+          width: 90%; }
           html body #wrapper header div#header-branding div#header-branding-inner img {
             display: inline-block;
-            margin: 0 70px 0 0; }
+            margin-right: 20px;
+            width: 80px; }
           html body #wrapper header div#header-branding div#header-branding-inner h2 {
             display: inline-block;
+            width: calc(100% - 105px);
+            color: #fff;
+            font-size: 18px;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5); }
+      @media (min-width: 321px) {
+        html body #wrapper header div#header-branding div#header-branding-inner {
+          width: 65%; }
+          html body #wrapper header div#header-branding div#header-branding-inner img {
+            margin-right: 70px;
+            width: auto; }
+          html body #wrapper header div#header-branding div#header-branding-inner h2 {
             margin-left: 110px;
-            color: #ffffff;
+            width: auto;
             font-size: 35px;
             line-height: 140px;
-            vertical-align: top;
-            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5); }
+            vertical-align: top; } }
       html body #wrapper header nav#header-navigation {
         background-color: #31043f; }
         html body #wrapper header nav#header-navigation > ul {
@@ -106,7 +117,7 @@ html {
         background-color: #fff;
         border: 1px solid #777;
         border-radius: 3px;
-        box-shadow: 6px 0px 7px -7px #888888, 0px 6px 7px -7px #888888;
+        box-shadow: 6px 0px 7px -7px #888, 0px 6px 7px -7px #888;
         cursor: pointer;
         outline: none; }
         html body #wrapper main#home section button.see-all a {
@@ -122,7 +133,7 @@ html {
         width: 100%;
         height: 400px;
         overflow: hidden;
-        box-shadow: 6px 0px 7px -7px #888888, 0px 6px 7px -7px #888888; }
+        box-shadow: 6px 0px 7px -7px #888, 0px 6px 7px -7px #888; }
         html body #wrapper main#home section#recent-projects div#slider-wrapper ul {
           position: relative;
           top: 0;
@@ -182,7 +193,7 @@ html {
         width: calc(100% / 2 - 15px);
         border: 1px solid #aaa;
         border-radius: 3px;
-        box-shadow: 6px 0px 7px -7px #888888, 0px 6px 7px -7px #888888; }
+        box-shadow: 6px 0px 7px -7px #888, 0px 6px 7px -7px #888; }
         html body #wrapper main#home section#students ul li img {
           display: inline-block;
           width: 26%;
@@ -250,7 +261,7 @@ html {
           vertical-align: top;
           border: 1px solid #aaa;
           border-radius: 3px;
-          box-shadow: 6px 0px 7px -7px #888888, 0px 6px 7px -7px #888888; }
+          box-shadow: 6px 0px 7px -7px #888, 0px 6px 7px -7px #888; }
           html body #wrapper main#projects section#projects-list ul li a {
             text-decoration: none; }
             html body #wrapper main#projects section#projects-list ul li a img {
@@ -281,7 +292,7 @@ html {
           background-color: #fff;
           border: 1px solid #777;
           border-radius: 3px;
-          box-shadow: 6px 0px 7px -7px #888888, 0px 6px 7px -7px #888888;
+          box-shadow: 6px 0px 7px -7px #888, 0px 6px 7px -7px #888;
           cursor: pointer;
           outline: none; }
       html body #wrapper main#students section#class-select ul#class-select-list li:first-child {
@@ -302,7 +313,7 @@ html {
           margin-bottom: 20px;
           border: 1px solid #aaa;
           border-radius: 3px;
-          box-shadow: 6px 0px 7px -7px #888888, 0px 6px 7px -7px #888888; }
+          box-shadow: 6px 0px 7px -7px #888, 0px 6px 7px -7px #888; }
           html body #wrapper main#students section#students-list ul li img {
             display: inline-block;
             width: 20%;
@@ -566,3 +577,5 @@ html {
           border: none; }
     html body #wrapper h1, html body #wrapper h2, html body #wrapper h3, html body #wrapper h4, html body #wrapper p {
       color: #333; }
+
+/*# sourceMappingURL=style.css.map */

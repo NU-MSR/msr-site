@@ -2,9 +2,11 @@
 /* Globals */
 $relative-assets-path: '..';
 $font-family: Arial, Helvetica, sans-serif;
-$inner-width: 65%;
 $box-shadow: 6px  0px 7px -7px #888,
 	         0px  6px 7px -7px #888;
+
+$mobile-inner-width: 90%;	         
+$inner-width: 65%;
 
 
 /* Templating */
@@ -35,22 +37,41 @@ html {
 					div#header-branding-inner {
 						margin: 0 auto;
 						padding: 20px 0;
-						width: $inner-width;
+						width: $mobile-inner-width;
 
 						img {
 							display: inline-block;
-							margin: 0 70px 0 0;
+							margin-right: 20px;
+							width: 80px;
 						}
 						h2 {
 							display: inline-block;
-							margin-left: 110px;
-							color: #ffffff;
-							font-size: 35px;
-							line-height: 140px;
-							vertical-align: top;
+							width: calc(100% - 105px);
+							color: #fff;
+							font-size: 18px;
 							text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
 						}
 					}
+				}
+				@media(min-width: 321px) {
+					div#header-branding {
+
+						div#header-branding-inner {
+							width: $inner-width;
+
+							img {
+								margin-right: 70px;
+								width: auto;
+							}
+							h2 {
+								margin-left: 110px;
+								width: auto;
+								font-size: 35px;
+								line-height: 140px;
+								vertical-align: top;
+							}
+						}
+					}					
 				}
 				nav#header-navigation {
 					background-color: #31043f;
