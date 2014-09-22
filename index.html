@@ -13,7 +13,7 @@ title: Home
 				{% for project in site.projects limit: 4 %}
 					<li>
 						<a href="{{ site.baseurl }}{{ project.url }}">
-							<img src="http://unsplash.it/1130/400?random">
+							<img src="http://unsplash.it/248/250?random">
 							<h2>{{ project.title }}</h2>
 							<p>{{ project.overview | truncatewords: 18 }}</p>
 						</a>
@@ -53,7 +53,7 @@ title: Home
 
 	<section id="recent-resource">
 		<h2>Recent Resources Post</h2>
-		<button class="see-all"><a href="{{ site.baseurl }}/resources/">Go to Resources</a></button>
+		<button class="see-all"><a href="{{ site.baseurl }}/resources/">See all</a></button>
 		<div id="resource-content">
 			{% for resource in site.resources limit: 1 %}
 				<a href="{{ site.baseurl }}{{ resource.url }}">

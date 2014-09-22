@@ -56,7 +56,7 @@ html {
         background-color: #31043f; }
         html body #wrapper header nav#header-navigation > ul {
           margin: 0 auto;
-          width: 65%;
+          width: 90%;
           list-style: none; }
           html body #wrapper header nav#header-navigation > ul > li {
             position: relative;
@@ -68,56 +68,69 @@ html {
               padding: 11px 0;
               text-align: center;
               text-decoration: none;
-              font-size: 15px;
+              font-size: 9px;
               color: #fff; }
-            html body #wrapper header nav#header-navigation > ul > li ul {
+            html body #wrapper header nav#header-navigation > ul > li > ul {
               display: none;
               position: absolute;
-              top: 39px;
+              top: 32px;
               left: -5px;
               z-index: 1;
               width: calc(100% + 6px);
               text-align: center;
               list-style: none;
               background-color: #31043f; }
-              html body #wrapper header nav#header-navigation > ul > li ul li a {
+              html body #wrapper header nav#header-navigation > ul > li > ul li a {
                 display: block;
                 padding: 5px 0;
                 color: #fff;
                 text-decoration: none;
-                font-size: 13px; }
-              html body #wrapper header nav#header-navigation > ul > li ul li:last-child {
+                font-size: 9px; }
+              html body #wrapper header nav#header-navigation > ul > li > ul li:last-child {
                 padding-bottom: 5px; }
           html body #wrapper header nav#header-navigation > ul > li:first-child {
             border-left: 1px solid #5b3b64; }
           html body #wrapper header nav#header-navigation > ul > li:hover ul {
             display: block; }
+      @media (min-width: 321px) {
+        html body #wrapper header nav#header-navigation > ul {
+          width: 65%; }
+          html body #wrapper header nav#header-navigation > ul > li > a {
+            font-size: 15px; }
+          html body #wrapper header nav#header-navigation > ul > li > ul {
+            top: 39px; }
+            html body #wrapper header nav#header-navigation > ul > li > ul li a {
+              font-size: 13px; } }
     html body #wrapper main {
       margin: 0 auto;
-      padding: 15px 40px 25px 40px;
-      width: calc(65% - 80px);
+      padding: 5px 20px 25px 20px;
+      width: calc(90% - 40px);
       background-color: #fff;
       box-shadow: 6px 0px 10px -7px #888, -6px 0px 10px -7px #888; }
       html body #wrapper main h1 {
         margin-bottom: 20px;
         font-size: 45px; }
+      @media (min-width: 321px) {
+        html body #wrapper main {
+          padding: 15px 40px 25px 40px;
+          width: calc(65% - 80px); } }
     html body #wrapper main#home section {
       margin-bottom: 30px; }
       html body #wrapper main#home section > h2 {
         display: inline-block;
         vertical-align: middle;
         margin: 20px 0;
-        font-size: 25px; }
+        font-size: 16px; }
       html body #wrapper main#home section button.see-all {
         display: inline-block;
         margin-left: 5px;
-        padding: 6px 10px;
+        padding: 5px 7px;
         color: #555;
-        font-size: 14px;
+        font-size: 13px;
         background-color: #fff;
         border: 1px solid #777;
         border-radius: 3px;
-        box-shadow: 6px 0px 7px -7px #888, 0px 6px 7px -7px #888;
+        box-shadow: 6px 0px 7px -7px #888888, 0px 6px 7px -7px #888888;
         cursor: pointer;
         outline: none; }
         html body #wrapper main#home section button.see-all a {
@@ -126,14 +139,20 @@ html {
       html body #wrapper main#home section button.see-all:active {
         position: relative;
         top: 1px; }
+    @media (min-width: 321px) {
+      html body #wrapper main#home section > h2 {
+        font-size: 25px; }
+      html body #wrapper main#home section button.see-all {
+        padding: 6px 10px;
+        font-size: 14px; } }
     html body #wrapper main#home section#recent-projects {
       width: 100%; }
       html body #wrapper main#home section#recent-projects div#slider-wrapper {
         position: relative;
         width: 100%;
-        height: 400px;
+        height: 250px;
         overflow: hidden;
-        box-shadow: 6px 0px 7px -7px #888, 0px 6px 7px -7px #888; }
+        box-shadow: 6px 0px 7px -7px #888888, 0px 6px 7px -7px #888888; }
         html body #wrapper main#home section#recent-projects div#slider-wrapper ul {
           position: relative;
           top: 0;
@@ -151,15 +170,15 @@ html {
           position: absolute;
           top: 50%;
           margin-top: -40px;
-          width: 45px;
-          height: 90px;
+          width: 35px;
+          height: 70px;
           background-color: #333;
           border: none;
           opacity: 0.7;
           cursor: pointer;
           outline: none; }
           html body #wrapper main#home section#recent-projects div#slider-wrapper button i {
-            font-size: 60px;
+            font-size: 50px;
             color: #777; }
         html body #wrapper main#home section#recent-projects div#slider-wrapper button:hover {
           opacity: 0.9; }
@@ -174,17 +193,34 @@ html {
         html body #wrapper main#home section#recent-projects div#slider-wrapper div#slider-info {
           position: absolute;
           bottom: 0;
-          padding: 20px;
-          width: calc(100% - 40px);
+          padding: 1px 7px;
+          width: calc(100% - 14px);
           height: 55px;
           background-color: #444;
           opacity: 0.8; }
           html body #wrapper main#home section#recent-projects div#slider-wrapper div#slider-info h2, html body #wrapper main#home section#recent-projects div#slider-wrapper div#slider-info p {
             color: #fff; }
           html body #wrapper main#home section#recent-projects div#slider-wrapper div#slider-info h2 {
-            margin-bottom: 5px; }
+            margin-bottom: 5px;
+            font-size: 15px; }
           html body #wrapper main#home section#recent-projects div#slider-wrapper div#slider-info p {
-            font-size: 14px; }
+            font-size: 10px; }
+    @media (min-width: 321px) {
+      html body #wrapper main#home section#recent-projects div#slider-wrapper {
+        height: 400px; }
+        html body #wrapper main#home section#recent-projects div#slider-wrapper button {
+          width: 45px;
+          height: 90px; }
+          html body #wrapper main#home section#recent-projects div#slider-wrapper button i {
+            font-size: 60px; }
+        html body #wrapper main#home section#recent-projects div#slider-wrapper div#slider-info {
+          height: 55px;
+          padding: 20px;
+          width: calc(100% - 40px); }
+          html body #wrapper main#home section#recent-projects div#slider-wrapper div#slider-info h2 {
+            font-size: initial; }
+          html body #wrapper main#home section#recent-projects div#slider-wrapper div#slider-info p {
+            font-size: 14px; } }
     html body #wrapper main#home section#students {
       width: 100%; }
       html body #wrapper main#home section#students ul li {
@@ -193,7 +229,7 @@ html {
         width: calc(100% / 2 - 15px);
         border: 1px solid #aaa;
         border-radius: 3px;
-        box-shadow: 6px 0px 7px -7px #888, 0px 6px 7px -7px #888; }
+        box-shadow: 6px 0px 7px -7px #888888, 0px 6px 7px -7px #888888; }
         html body #wrapper main#home section#students ul li img {
           display: inline-block;
           width: 26%;
@@ -261,7 +297,7 @@ html {
           vertical-align: top;
           border: 1px solid #aaa;
           border-radius: 3px;
-          box-shadow: 6px 0px 7px -7px #888, 0px 6px 7px -7px #888; }
+          box-shadow: 6px 0px 7px -7px #888888, 0px 6px 7px -7px #888888; }
           html body #wrapper main#projects section#projects-list ul li a {
             text-decoration: none; }
             html body #wrapper main#projects section#projects-list ul li a img {
@@ -292,7 +328,7 @@ html {
           background-color: #fff;
           border: 1px solid #777;
           border-radius: 3px;
-          box-shadow: 6px 0px 7px -7px #888, 0px 6px 7px -7px #888;
+          box-shadow: 6px 0px 7px -7px #888888, 0px 6px 7px -7px #888888;
           cursor: pointer;
           outline: none; }
       html body #wrapper main#students section#class-select ul#class-select-list li:first-child {
@@ -313,7 +349,7 @@ html {
           margin-bottom: 20px;
           border: 1px solid #aaa;
           border-radius: 3px;
-          box-shadow: 6px 0px 7px -7px #888, 0px 6px 7px -7px #888; }
+          box-shadow: 6px 0px 7px -7px #888888, 0px 6px 7px -7px #888888; }
           html body #wrapper main#students section#students-list ul li img {
             display: inline-block;
             width: 20%;
@@ -577,5 +613,3 @@ html {
           border: none; }
     html body #wrapper h1, html body #wrapper h2, html body #wrapper h3, html body #wrapper h4, html body #wrapper p {
       color: #333; }
-
-/*# sourceMappingURL=style.css.map */
