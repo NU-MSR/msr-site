@@ -654,10 +654,7 @@ html {
 								}
 							}
 						}
-						li.hidden-by-search {
-							display: none;
-						}
-						li.hidden-by-tags {
+						li.hidden-by-search, li.hidden-by-tags {
 							display: none;
 						}
 					}

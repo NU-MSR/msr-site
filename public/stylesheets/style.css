@@ -451,9 +451,7 @@ html {
                   content: ','; }
               html body #wrapper main#resources section#resources-list > ul > li a div.resource-content {
                 display: none; }
-          html body #wrapper main#resources section#resources-list > ul li.hidden-by-search {
-            display: none; }
-          html body #wrapper main#resources section#resources-list > ul li.hidden-by-tags {
+          html body #wrapper main#resources section#resources-list > ul li.hidden-by-search, html body #wrapper main#resources section#resources-list > ul li.hidden-by-tags {
             display: none; }
     html body #wrapper main.resource h1 {
       margin: 0.67em 0;

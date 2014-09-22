@@ -172,9 +172,10 @@ var filterByTag = function($tag) {
 		clickedList.push($(this).html());
 	});
 	
-	// If All tag is selected, show all
+	// If All tag is selected, show all and return
 	if(clickedList[0] == 'All') {
 		$('section#resources-list > ul > li').removeClass('hidden-by-tags');
+		return;
 	}
 
 	// Cycle through each resource
@@ -200,22 +201,28 @@ var filterByTag = function($tag) {
 	});
 };
 // Search for resources from search bar input
-var searchByTitle = function(search) {
-	if( search.length > 0 ) {
-		// Undo hide class
-		$('section#resources-list > ul > li').removeClass('hidden-by-search');
+var searchResources = function(search) {
+	// Undo hide class
+	$('section#resources-list > ul > li').removeClass('hidden-by-search');
 
+	// If search is valid
+	if( search.length > 0 ) {
 		// Cycle through each resource
 		$('section#resources-list > ul > li').each(function() {
 
-			// If resource doesn't contain string, add hide class
-			if( $(this).find('div.resource-content').html().toLowerCase().indexOf(search.toLowerCase()) <= -1 ) {
-				$(this).addClass('hidden-by-search');
+			var $resource = $(this);
+
+			// If resource title doesn't contain string
+			if( $resource.find('h1.resource-title').html().toLowerCase().indexOf(search.toLowerCase()) <= -1 ) {
+
+				// And if resource content doesn't contain string
+				if( $resource.find('div.resource-content').html().toLowerCase().indexOf(search.toLowerCase()) <= -1 ) {
+
+					// Hide resource
+					$resource.addClass('hidden-by-search');
+				}
 			}
 		});
-	}
-	else {
-		filterByTag();
 	}
 };
 
@@ -277,7 +284,7 @@ $(window).load(function() {
 
 			// Handle search input entering: implement searching through resources
 			$('section#resources-search form button').click(function() {
-				searchByTitle($('section#resources-search form input').val());
+				searchResources($('section#resources-search form input').val());
 			});
 
 			break;
