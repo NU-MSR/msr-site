@@ -8,12 +8,44 @@
 Jekyll is a simple, blog-aware, static site generator. It takes a template directory containing raw text files in various formats, runs it through Markdown and Liquid converters, and spits out a complete, ready-to-publish static website suitable for serving with your favorite web server. Jekyll also happens to be the engine behind GitHub Pages, which means you can use Jekyll to host your project's page, blog, or website from GitHub's servers for free (taken from Jekyll's website: http://jekyllrb.com/docs/home/).
 
 ### Get your workstation set up
-* Install <a href="https://www.ruby-lang.org/en/downloads/>Ruby</a>
-* Install <a href="rubygems.org/pages/download">RubyGems</a>
-* Install <a href="nodejs.org">NodeJS</a>
-* Install <a href="jekyllrb.com/docs/installation">Jekyll</a>
 
-### Basic Usage (recommended)
+To test your website locally, you will need several different packages. Follow the links below to install:
+
+* <a href="https://www.ruby-lang.org/en/downloads/">Ruby</a>
+* <a href="http://rubygems.org/pages/download">RubyGems</a>
+* <a href="http://nodejs.org">NodeJS</a>
+* <a href="http://jekyllrb.com/docs/installation">Jekyll</a>
+
+To install from `apt-get`, you can just run ``` sudo apt-get install ruby
+ruby-dev nodejs nodejs-dev rubygems jekyll ``` On Ubuntu 14.04, the versions of
+`ruby` and `jekyll` that are on `apt-get` are a bit out of date. Thus, if you
+install all of the above packages from `apt-get` using the above command, you
+are likely to get errors when running the commands in the [Basic Usage](#basic)
+section below. If you see errors about the `--watch` variable, run the following
+commands to use `rvm` (Ruby Version Manager) to install a new version of `ruby`
+and `jekyll`:
+
+```
+sudo apt-get install libgdbm-dev libncurses5-dev automake libtool bison libffi-dev
+curl -L https://get.rvm.io | bash -s stable
+source ~/.rvm/scripts/rvm
+echo "source ~/.rvm/scripts/rvm" >> ~/.bashrc
+rvm install ruby --latest
+echo "gem: --no-ri --no-rdoc" > ~/.gemrc
+gem update --system
+gem install jekyll
+```
+* line 1 installs dependencies for `rvm`
+* lines 2-4 configure your environment to use `ruby` versions installed from
+`rvm` instead of from `apt-get`
+* line 5 updates `rvm` itself
+* line 6 sets `gem` to not install documentation locally (this is optional)
+* line 7 updates `gem`
+* line 8 installs the latest `jekyll`
+
+
+
+### Basic Usage (recommended) <a name="basic"></a>
 In one terminal, build the jekyll site, watching for any changes (run in site root directory)
 ```
 $  jekyll build --watch

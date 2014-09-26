@@ -41,7 +41,9 @@ title: Home
 					<div class="student-info">
 						<a href="{{ site.baseurl }}/students/#{{ student.first_name }}-{{ student.last_name }}"><h2>{{ student.name }}</h2></a>
 						<h3>Class of {{ student.class_year }}</h3>
+						{% if student.focus %}
 						<h3 class="student-focuses">Focuses: {{ student.focus }}</h3>
+						{% endif %}
 						<h3 class="student-website">Website: <a target="_blank" href="{{ student.website }}">{{ student.website }}</a></h3>
 					</div>
 				</li>
