@@ -878,6 +878,9 @@ html {
 					margin-top: 0.2em;
 					font-size: 0.95em;
 					color: #555;
+					span:not(:last-child):after {
+								content: ',';
+						}
 				}
 			}
 			/* Posts */

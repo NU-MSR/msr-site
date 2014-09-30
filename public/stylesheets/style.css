@@ -130,7 +130,7 @@ html {
         background-color: #fff;
         border: 1px solid #777;
         border-radius: 3px;
-        box-shadow: 6px 0px 7px -7px #888888, 0px 6px 7px -7px #888888;
+        box-shadow: 6px 0px 7px -7px #888, 0px 6px 7px -7px #888;
         cursor: pointer;
         outline: none; }
         html body #wrapper main#home section button.see-all a {
@@ -152,7 +152,7 @@ html {
         width: 100%;
         height: 250px;
         overflow: hidden;
-        box-shadow: 6px 0px 7px -7px #888888, 0px 6px 7px -7px #888888; }
+        box-shadow: 6px 0px 7px -7px #888, 0px 6px 7px -7px #888; }
         html body #wrapper main#home section#recent-projects div#slider-wrapper ul {
           position: relative;
           top: 0;
@@ -229,7 +229,7 @@ html {
         width: 100%;
         border: 1px solid #aaa;
         border-radius: 3px;
-        box-shadow: 6px 0px 7px -7px #888888, 0px 6px 7px -7px #888888; }
+        box-shadow: 6px 0px 7px -7px #888, 0px 6px 7px -7px #888; }
         html body #wrapper main#home section#students ul li img {
           display: inline-block;
           width: 26%;
@@ -350,7 +350,7 @@ html {
           vertical-align: top;
           border: 1px solid #aaa;
           border-radius: 3px;
-          box-shadow: 6px 0px 7px -7px #888888, 0px 6px 7px -7px #888888; }
+          box-shadow: 6px 0px 7px -7px #888, 0px 6px 7px -7px #888; }
           html body #wrapper main#projects section#projects-list ul li a {
             text-decoration: none; }
             html body #wrapper main#projects section#projects-list ul li a img {
@@ -381,7 +381,7 @@ html {
           background-color: #fff;
           border: 1px solid #777;
           border-radius: 3px;
-          box-shadow: 6px 0px 7px -7px #888888, 0px 6px 7px -7px #888888;
+          box-shadow: 6px 0px 7px -7px #888, 0px 6px 7px -7px #888;
           cursor: pointer;
           outline: none; }
       html body #wrapper main#students section#class-select ul#class-select-list li:first-child {
@@ -402,7 +402,7 @@ html {
           margin-bottom: 20px;
           border: 1px solid #aaa;
           border-radius: 3px;
-          box-shadow: 6px 0px 7px -7px #888888, 0px 6px 7px -7px #888888; }
+          box-shadow: 6px 0px 7px -7px #888, 0px 6px 7px -7px #888; }
           html body #wrapper main#students section#students-list ul li img {
             display: inline-block;
             width: 20%;
@@ -582,6 +582,8 @@ html {
       margin-top: 0.2em;
       font-size: 0.95em;
       color: #555; }
+      html body #wrapper main.resource h4.resource-tags span:not(:last-child):after {
+        content: ','; }
     html body #wrapper main.project article {
       width: 100%; }
       html body #wrapper main.project article section.project-header {
@@ -671,3 +673,5 @@ html {
             border: none; } }
     html body #wrapper h1, html body #wrapper h2, html body #wrapper h3, html body #wrapper h4, html body #wrapper p {
       color: #333; }
+
+/*# sourceMappingURL=style.css.map */
