@@ -18,6 +18,7 @@ requirements:       [python-wstool,
                     Baxter Simulation repository (must request access by emailing RSDK.support@rethinkrobotics.com]
 overview:           Learn how to quickly get a Baxter simulation running in Gazebo.
                     Execute the joint position keyboard example in the simulation.
+show_on_home:       true
 ---
 
 

@@ -193,9 +193,10 @@ requirements:       [python-wstool,
                     Baxter Simulation repository (must request access by emailing RSDK.support@rethinkrobotics.com]
 overview:           Learn how to quickly get a Baxter simulation running in Gazebo.
                     Execute the joint position keyboard example in the simulation.
+show_on_home:       true
 ---
 ```
-Following that front matter, just add content in normal markdown.
+The front matter item, "show_on_home" determines if that project will appear in the project slideshow on the Home page. Following that front matter, just add content in normal markdown.
 
 ### Adding Resources
 Adding a resource is simply a matter of creating a file in the _resources directory with the file name in the following format:
