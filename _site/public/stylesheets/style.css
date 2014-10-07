@@ -32,13 +32,14 @@ html {
           width: 65%; }
           html body #wrapper header div#header-branding div#header-branding-inner img {
             display: inline-block;
-            margin: 0 70px 0 0; }
+            margin: 0 70px 0 0;
+            width: 230px; }
           html body #wrapper header div#header-branding div#header-branding-inner h2 {
             display: inline-block;
-            margin-left: 110px;
+            margin-left: 20px;
             color: #ffffff;
             font-size: 35px;
-            line-height: 140px;
+            line-height: 230px;
             vertical-align: top;
             text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5); }
       html body #wrapper header nav#header-navigation {
@@ -174,38 +175,8 @@ html {
             margin-bottom: 5px; }
           html body #wrapper main#home section#recent-projects div#slider-wrapper div#slider-info p {
             font-size: 14px; }
-    html body #wrapper main#home section#students {
+    html body #wrapper main#home section#about {
       width: 100%; }
-      html body #wrapper main#home section#students ul li {
-        display: inline-block;
-        margin-bottom: 20px;
-        width: calc(100% / 2 - 15px);
-        border: 1px solid #aaa;
-        border-radius: 3px;
-        box-shadow: 6px 0px 7px -7px #888, 0px 6px 7px -7px #888; }
-        html body #wrapper main#home section#students ul li img {
-          display: inline-block;
-          width: 26%;
-          vertical-align: top; }
-        html body #wrapper main#home section#students ul li div.student-info {
-          display: inline-block;
-          padding: 20px; }
-          html body #wrapper main#home section#students ul li div.student-info > a {
-            text-decoration: none;
-            color: #333; }
-            html body #wrapper main#home section#students ul li div.student-info > a h2 {
-              margin-bottom: 5px;
-              font-size: 14px; }
-          html body #wrapper main#home section#students ul li div.student-info > a:hover {
-            text-decoration: underline; }
-          html body #wrapper main#home section#students ul li div.student-info h3 {
-            font-size: 13px; }
-            html body #wrapper main#home section#students ul li div.student-info h3 a {
-              color: #333; }
-      html body #wrapper main#home section#students ul li:nth-child(2n) {
-        margin-left: 20px; }
-      html body #wrapper main#home section#students ul li:nth-child(3), html body #wrapper main#home section#students ul li:nth-child(4) {
-        margin-bottom: 0; }
     html body #wrapper main#home section#recent-resource div#resource-content a {
       display: block;
       text-decoration: none; }
