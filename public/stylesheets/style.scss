@@ -1,12 +1,9 @@
-
 /* Globals */
 $relative-assets-path: '..';
 $font-family: Arial, Helvetica, sans-serif;
+$inner-width: 65%;
 $box-shadow: 6px  0px 7px -7px #888,
 	         0px  6px 7px -7px #888;
-
-$mobile-inner-width: 90%;	         
-$inner-width: 65%;
 
 
 /* Templating */
@@ -37,48 +34,29 @@ html {
 					div#header-branding-inner {
 						margin: 0 auto;
 						padding: 20px 0;
-						width: $mobile-inner-width;
+						width: $inner-width;
 
 						img {
 							display: inline-block;
-							margin-right: 20px;
-							width: 80px;
+							margin: 0 70px 0 0;
 						}
 						h2 {
 							display: inline-block;
-							width: calc(100% - 105px);
-							color: #fff;
-							font-size: 18px;
+							margin-left: 110px;
+							color: #ffffff;
+							font-size: 35px;
+							line-height: 140px;
+							vertical-align: top;
 							text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
 						}
 					}
-				}
-				@media(min-width: 321px) {
-					div#header-branding {
-
-						div#header-branding-inner {
-							width: $inner-width;
-
-							img {
-								margin-right: 70px;
-								width: auto;
-							}
-							h2 {
-								margin-left: 110px;
-								width: auto;
-								font-size: 35px;
-								line-height: 140px;
-								vertical-align: top;
-							}
-						}
-					}					
 				}
 				nav#header-navigation {
 					background-color: #31043f;
 
 					> ul {
 						margin: 0 auto;
-						width: $mobile-inner-width;
+						width: $inner-width;
 						list-style: none;
 
 						> li {
@@ -92,13 +70,13 @@ html {
 								padding: 11px 0;
 								text-align: center;
 								text-decoration: none;
-								font-size: 9px;
+								font-size: 15px;
 								color: #fff;
 							}
-							> ul {
+							ul {
 								display: none;
 								position: absolute;
-								top: 32px;
+								top: 39px;
 								left: -5px;
 								z-index: 1;
 								width: calc(100% + 6px);
@@ -113,7 +91,7 @@ html {
 										padding: 5px 0;
 										color: #fff;
 										text-decoration: none;
-										font-size: 9px;
+										font-size: 13px;
 									}
 								}
 								li:last-child {
@@ -132,37 +110,12 @@ html {
 						}
 					}
 				}
-				@media(min-width: 321px) {
-					nav#header-navigation {
-
-						> ul {
-							width: $inner-width;
-
-							> li {
-
-								> a {
-									font-size: 15px;
-								}
-								> ul {
-									top: 39px;
-
-									li {
-
-										a {
-											font-size: 13px;
-										}
-									}
-								}
-							}
-						}
-					}
-				}
 			}
 			/* General main */
 			main {
 				margin: 0 auto;
-				padding: 5px 20px 25px 20px;
-				width: calc(#{$mobile-inner-width} - 40px);
+				padding: 15px 40px 25px 40px;
+				width: calc(#{$inner-width} - 80px);
 				background-color: #fff;
 				box-shadow: 6px 0px 10px -7px #888,
 				           -6px 0px 10px -7px #888;
@@ -170,11 +123,6 @@ html {
 				h1 {
 					margin-bottom: 20px;
 					font-size: 45px;
-				}
-
-				@media(min-width: 321px) {
-					padding: 15px 40px 25px 40px;
-					width: calc(#{$inner-width} - 80px);
 				}
 			}
 			/* Home */
@@ -187,14 +135,14 @@ html {
 						display: inline-block;
 						vertical-align: middle;
 						margin: 20px 0;
-						font-size: 16px;
+						font-size: 25px;
 					}
 					button.see-all {
 						display: inline-block;
 						margin-left: 5px;
-						padding: 5px 7px;
+						padding: 6px 10px;
 						color: #555;
-						font-size: 13px;
+						font-size: 14px;
 						background-color: #fff;
 						border: 1px solid #777;
 						border-radius: 3px;
@@ -212,25 +160,13 @@ html {
 						top: 1px;
 					}
 				}
-				@media(min-width: 321px) {
-					section {
-
-						> h2 {
-							font-size: 25px;
-						}
-						button.see-all {
-							padding: 6px 10px;
-							font-size: 14px;
-						}
-					}
-				}
 				section#recent-projects {
 					width: 100%;
 
 					div#slider-wrapper {
 						position: relative;
 						width: 100%;
-						height: 250px;
+						height: 400px;
 						overflow: hidden;
 						box-shadow: $box-shadow;
 
@@ -259,8 +195,8 @@ html {
 							position: absolute;
 							top: 50%;
 							margin-top: -40px;
-							width: 35px;
-							height: 70px;
+							width: 45px;
+							height: 90px;
 							background-color: #333;
 							border: none;
 							opacity: 0.7;
@@ -268,7 +204,7 @@ html {
 							outline: none;
 
 							i {
-								font-size: 50px;
+								font-size: 60px;
 								color: #777;
 							}
 						}
@@ -288,8 +224,8 @@ html {
 						div#slider-info {
 							position: absolute;
 							bottom: 0;
-							padding: 1px 7px;
-							width: calc(100% - 14px);
+							padding: 20px;
+							width: calc(100% - 40px);
 							height: 55px;
 							background-color: #444;
 							opacity: 0.8;
@@ -299,39 +235,9 @@ html {
 							}
 							h2 {
 								margin-bottom: 5px;
-								font-size: 15px;
 							}
 							p {
-								font-size: 10px;
-							}
-						}
-					}
-				}
-				@media(min-width: 321px) {
-					section#recent-projects {
-
-						div#slider-wrapper {
-							height: 400px;
-
-							button {
-								width: 45px;
-								height: 90px;
-
-								i {
-									font-size: 60px;
-								}
-							}
-							div#slider-info {
-								height: 55px;
-								padding: 20px;
-								width: calc(100% - 40px);
-
-								h2 {
-									font-size: initial;
-								}
-								p {
-									font-size: 14px;
-								}
+								font-size: 14px;
 							}
 						}
 					}
@@ -344,7 +250,7 @@ html {
 						li {
 							display: inline-block;
 							margin-bottom: 20px;
-							width: 100%;
+							width: calc(100% / 2 - 15px);
 							border: 1px solid #aaa;
 							border-radius: 3px;
 							box-shadow: $box-shadow;
@@ -356,7 +262,7 @@ html {
 				            }
 				            div.student-info {
 				            	display: inline-block;
-				            	padding: 5px;
+				            	padding: 20px;
 
 				            	> a {
 				            		text-decoration: none;
@@ -364,14 +270,14 @@ html {
 
 				            		h2 {
 				            			margin-bottom: 5px;
-				            			font-size: 12px;
+				            			font-size: 14px;
 				            		}
 				            	}
 				            	> a:hover {
 				            		text-decoration: underline;
 				            	}
 				            	h3 {
-				            		font-size: 10px;
+				            		font-size: 13px;
 
 				            		a {
 				            			color: #333;
@@ -379,36 +285,11 @@ html {
 				            	}
 				            }
 						}
-					}
-				}
-				@media(min-width: 321px) {
-					section#students {
-
-						ul {
-
-							li {
-								width: calc(100% / 2 - 15px);
-
-								div.student-info {
-									padding: 20px;
-
-									> a {
-
-										h2 {
-											font-size: 14px;
-										}
-									}
-									h3 {
-										font-size: 13px;
-									}
-								}
-							}
-							li:nth-child(2n) {
-								margin-left: 20px;
-							}
-							li:nth-child(3), li:nth-child(4) {
-								margin-bottom: 0;
-							}
+						li:nth-child(2n) {
+							margin-left: 20px;
+						}
+						li:nth-child(3), li:nth-child(4) {
+							margin-bottom: 0;
 						}
 					}
 				}
@@ -421,116 +302,43 @@ html {
 							text-decoration: none;
 
 							img {
-								width: 100%;
+								display: inline-block;
+								width: 30%;
 								vertical-align: top;
 							}
 							div.resource-info {
 								position: relative;
-								margin-top: 10px;
-								width: 100%;
+								padding: 0 0 0 20px;
+								width: 65%;
+								display: inline-block;
 
 								h3.resource-date {
-									font-size: 12px;
+									font-size: 14px;
 									margin-bottom: 10px;
 								}
 								h2.resource-title {
-									font-size: 18px;
 								}
 								h3.resource-author {
-									font-size: 12px;
+									font-size: 14px;
 									font-weight: normal;
 								}
 								h4.resource-tags {
 									font-weight: normal;
-									font-size: 12px;
-
-									span:not(:last-child):after {
-										content: ',';
-									}
+									font-size: 14px;
 								}
-								div.resource-text {
-									margin: 10px 0;
-									font-size: 12px;
-									color: initial;
-
-									h1 {
-										margin: 10px 0;
-										font-size: 13px;
-									}
-									h2, h3, h4, h5, h6, {
-										margin: 5px 0;
-										font-size: 12px;
-									}
-									p {
-										margin: 5px 0;
-										font-size: 12px;
-									}
-								}
-							}
-						}
-					}
-				}
-				@media(min-width: 321px) {
-					section#recent-resource {
-
-						div#resource-content {
-
-							a {
-
-								img {
-									display: inline-block;
-									width: 30%;
-								}
-								div.resource-info {
-									display: inline-block;
-									margin-top: 0;
-									padding: 0 0 0 20px;
-									width: 65%;
-
-									h3.resource-date {
-										font-size: 14px;
-									}
-									h2.resource-title {
-										font-size: initial;
-									}
-									h3.resource-author {
-										font-size: 14px;
-									}
-									h4.resource-tags {
-										font-size: 14px;
-									}
-									div.resource-text {
-										margin: 20px 0;
-										font-size: 14px;
-
-										h1 {
-											margin: 15px 0;
-											font-size: 15px;
-										}
-										h2, h3, h4, h5, h6, {
-											margin: 10px 0;
-											font-size: 14px;
-										}
-										p {
-											margin: 10px 0;
-											font-size: 14px;
-										}
-									}
+								p.resource-content {
+									margin: 20px 0;
+									font-size: 14px;
 								}
 							}
 						}
 					}
 				}
 				hr {
-					margin: 30px 0 10px 0;
+					margin: 50px 0 30px 0;
 					height: 1px;
 					border: 0;
 					box-shadow: inset 0 6px 6px -6px #999;
-				}
-				@media(min-width: 321px) {
-					hr {
-						margin: 50px 0 30px 0;
-					}
 				}
 			}
 			/* Projects index */
@@ -972,28 +780,19 @@ html {
 				ul {
 					margin: 0 auto;
 					padding: 15px 0;
-					width: $mobile-inner-width;
+					width: $inner-width;
 					list-style: none;
 					text-align: center;
 
 					li {
 						padding: 0 5px;
+						display: inline-block;
 						color: #fff;
-						font-size: 12px;
+						font-size: 14px;
+						border-right: 1px solid #5b3b64;
 					}
-				}
-				@media(min-width: 321px) {
-					ul {
-						width: $inner-width;
-
-						li {
-							display: inline-block;
-							font-size: 14px;
-							border-right: 1px solid #5b3b64;
-						}
-						li:last-child {
-							border: none;
-						}
+					li:last-child {
+						border: none;
 					}
 				}
 			}

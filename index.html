@@ -13,7 +13,8 @@ title: Home
 				{% for project in site.projects limit: 4 %}
 					<li>
 						<a href="{{ site.baseurl }}{{ project.url }}">
-							<img src="http://unsplash.it/248/250?random">
+							<!-- <img src="http://unsplash.it/248/250?random"> -->
+							<img src="http://unsplash.it/1130/400?random">
 							<h2>{{ project.title }}</h2>
 							<p>{{ project.overview | truncatewords: 18 }}</p>
 						</a>
@@ -69,7 +70,7 @@ title: Home
 							{% endfor %}
 						</h4>
 						<div class="resource-text">
-							{{ resource.content | truncatewords: 100 }}
+							{{ resource.content | truncatewords: 80 }}
 						</div>
 					</div>
 				</a>

@@ -29,34 +29,23 @@ html {
         html body #wrapper header div#header-branding div#header-branding-inner {
           margin: 0 auto;
           padding: 20px 0;
-          width: 90%; }
-          html body #wrapper header div#header-branding div#header-branding-inner img {
-            display: inline-block;
-            margin-right: 20px;
-            width: 80px; }
-          html body #wrapper header div#header-branding div#header-branding-inner h2 {
-            display: inline-block;
-            width: calc(100% - 105px);
-            color: #fff;
-            font-size: 18px;
-            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5); }
-      @media (min-width: 321px) {
-        html body #wrapper header div#header-branding div#header-branding-inner {
           width: 65%; }
           html body #wrapper header div#header-branding div#header-branding-inner img {
-            margin-right: 70px;
-            width: auto; }
+            display: inline-block;
+            margin: 0 70px 0 0; }
           html body #wrapper header div#header-branding div#header-branding-inner h2 {
+            display: inline-block;
             margin-left: 110px;
-            width: auto;
+            color: #ffffff;
             font-size: 35px;
             line-height: 140px;
-            vertical-align: top; } }
+            vertical-align: top;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5); }
       html body #wrapper header nav#header-navigation {
         background-color: #31043f; }
         html body #wrapper header nav#header-navigation > ul {
           margin: 0 auto;
-          width: 90%;
+          width: 65%;
           list-style: none; }
           html body #wrapper header nav#header-navigation > ul > li {
             position: relative;
@@ -68,69 +57,56 @@ html {
               padding: 11px 0;
               text-align: center;
               text-decoration: none;
-              font-size: 9px;
+              font-size: 15px;
               color: #fff; }
-            html body #wrapper header nav#header-navigation > ul > li > ul {
+            html body #wrapper header nav#header-navigation > ul > li ul {
               display: none;
               position: absolute;
-              top: 32px;
+              top: 39px;
               left: -5px;
               z-index: 1;
               width: calc(100% + 6px);
               text-align: center;
               list-style: none;
               background-color: #31043f; }
-              html body #wrapper header nav#header-navigation > ul > li > ul li a {
+              html body #wrapper header nav#header-navigation > ul > li ul li a {
                 display: block;
                 padding: 5px 0;
                 color: #fff;
                 text-decoration: none;
-                font-size: 9px; }
-              html body #wrapper header nav#header-navigation > ul > li > ul li:last-child {
+                font-size: 13px; }
+              html body #wrapper header nav#header-navigation > ul > li ul li:last-child {
                 padding-bottom: 5px; }
           html body #wrapper header nav#header-navigation > ul > li:first-child {
             border-left: 1px solid #5b3b64; }
           html body #wrapper header nav#header-navigation > ul > li:hover ul {
             display: block; }
-      @media (min-width: 321px) {
-        html body #wrapper header nav#header-navigation > ul {
-          width: 65%; }
-          html body #wrapper header nav#header-navigation > ul > li > a {
-            font-size: 15px; }
-          html body #wrapper header nav#header-navigation > ul > li > ul {
-            top: 39px; }
-            html body #wrapper header nav#header-navigation > ul > li > ul li a {
-              font-size: 13px; } }
     html body #wrapper main {
       margin: 0 auto;
-      padding: 5px 20px 25px 20px;
-      width: calc(90% - 40px);
+      padding: 15px 40px 25px 40px;
+      width: calc(65% - 80px);
       background-color: #fff;
       box-shadow: 6px 0px 10px -7px #888, -6px 0px 10px -7px #888; }
       html body #wrapper main h1 {
         margin-bottom: 20px;
         font-size: 45px; }
-      @media (min-width: 321px) {
-        html body #wrapper main {
-          padding: 15px 40px 25px 40px;
-          width: calc(65% - 80px); } }
     html body #wrapper main#home section {
       margin-bottom: 30px; }
       html body #wrapper main#home section > h2 {
         display: inline-block;
         vertical-align: middle;
         margin: 20px 0;
-        font-size: 16px; }
+        font-size: 25px; }
       html body #wrapper main#home section button.see-all {
         display: inline-block;
         margin-left: 5px;
-        padding: 5px 7px;
+        padding: 6px 10px;
         color: #555;
-        font-size: 13px;
+        font-size: 14px;
         background-color: #fff;
         border: 1px solid #777;
         border-radius: 3px;
-        box-shadow: 6px 0px 7px -7px #888888, 0px 6px 7px -7px #888888;
+        box-shadow: 6px 0px 7px -7px #888, 0px 6px 7px -7px #888;
         cursor: pointer;
         outline: none; }
         html body #wrapper main#home section button.see-all a {
@@ -139,20 +115,14 @@ html {
       html body #wrapper main#home section button.see-all:active {
         position: relative;
         top: 1px; }
-    @media (min-width: 321px) {
-      html body #wrapper main#home section > h2 {
-        font-size: 25px; }
-      html body #wrapper main#home section button.see-all {
-        padding: 6px 10px;
-        font-size: 14px; } }
     html body #wrapper main#home section#recent-projects {
       width: 100%; }
       html body #wrapper main#home section#recent-projects div#slider-wrapper {
         position: relative;
         width: 100%;
-        height: 250px;
+        height: 400px;
         overflow: hidden;
-        box-shadow: 6px 0px 7px -7px #888888, 0px 6px 7px -7px #888888; }
+        box-shadow: 6px 0px 7px -7px #888, 0px 6px 7px -7px #888; }
         html body #wrapper main#home section#recent-projects div#slider-wrapper ul {
           position: relative;
           top: 0;
@@ -170,15 +140,15 @@ html {
           position: absolute;
           top: 50%;
           margin-top: -40px;
-          width: 35px;
-          height: 70px;
+          width: 45px;
+          height: 90px;
           background-color: #333;
           border: none;
           opacity: 0.7;
           cursor: pointer;
           outline: none; }
           html body #wrapper main#home section#recent-projects div#slider-wrapper button i {
-            font-size: 50px;
+            font-size: 60px;
             color: #777; }
         html body #wrapper main#home section#recent-projects div#slider-wrapper button:hover {
           opacity: 0.9; }
@@ -193,148 +163,78 @@ html {
         html body #wrapper main#home section#recent-projects div#slider-wrapper div#slider-info {
           position: absolute;
           bottom: 0;
-          padding: 1px 7px;
-          width: calc(100% - 14px);
+          padding: 20px;
+          width: calc(100% - 40px);
           height: 55px;
           background-color: #444;
           opacity: 0.8; }
           html body #wrapper main#home section#recent-projects div#slider-wrapper div#slider-info h2, html body #wrapper main#home section#recent-projects div#slider-wrapper div#slider-info p {
             color: #fff; }
           html body #wrapper main#home section#recent-projects div#slider-wrapper div#slider-info h2 {
-            margin-bottom: 5px;
-            font-size: 15px; }
+            margin-bottom: 5px; }
           html body #wrapper main#home section#recent-projects div#slider-wrapper div#slider-info p {
-            font-size: 10px; }
-    @media (min-width: 321px) {
-      html body #wrapper main#home section#recent-projects div#slider-wrapper {
-        height: 400px; }
-        html body #wrapper main#home section#recent-projects div#slider-wrapper button {
-          width: 45px;
-          height: 90px; }
-          html body #wrapper main#home section#recent-projects div#slider-wrapper button i {
-            font-size: 60px; }
-        html body #wrapper main#home section#recent-projects div#slider-wrapper div#slider-info {
-          height: 55px;
-          padding: 20px;
-          width: calc(100% - 40px); }
-          html body #wrapper main#home section#recent-projects div#slider-wrapper div#slider-info h2 {
-            font-size: initial; }
-          html body #wrapper main#home section#recent-projects div#slider-wrapper div#slider-info p {
-            font-size: 14px; } }
+            font-size: 14px; }
     html body #wrapper main#home section#students {
       width: 100%; }
       html body #wrapper main#home section#students ul li {
         display: inline-block;
         margin-bottom: 20px;
-        width: 100%;
+        width: calc(100% / 2 - 15px);
         border: 1px solid #aaa;
         border-radius: 3px;
-        box-shadow: 6px 0px 7px -7px #888888, 0px 6px 7px -7px #888888; }
+        box-shadow: 6px 0px 7px -7px #888, 0px 6px 7px -7px #888; }
         html body #wrapper main#home section#students ul li img {
           display: inline-block;
           width: 26%;
           vertical-align: top; }
         html body #wrapper main#home section#students ul li div.student-info {
           display: inline-block;
-          padding: 5px; }
+          padding: 20px; }
           html body #wrapper main#home section#students ul li div.student-info > a {
             text-decoration: none;
             color: #333; }
             html body #wrapper main#home section#students ul li div.student-info > a h2 {
               margin-bottom: 5px;
-              font-size: 12px; }
+              font-size: 14px; }
           html body #wrapper main#home section#students ul li div.student-info > a:hover {
             text-decoration: underline; }
           html body #wrapper main#home section#students ul li div.student-info h3 {
-            font-size: 10px; }
+            font-size: 13px; }
             html body #wrapper main#home section#students ul li div.student-info h3 a {
               color: #333; }
-    @media (min-width: 321px) {
-      html body #wrapper main#home section#students ul li {
-        width: calc(100% / 2 - 15px); }
-        html body #wrapper main#home section#students ul li div.student-info {
-          padding: 20px; }
-          html body #wrapper main#home section#students ul li div.student-info > a h2 {
-            font-size: 14px; }
-          html body #wrapper main#home section#students ul li div.student-info h3 {
-            font-size: 13px; }
       html body #wrapper main#home section#students ul li:nth-child(2n) {
         margin-left: 20px; }
       html body #wrapper main#home section#students ul li:nth-child(3), html body #wrapper main#home section#students ul li:nth-child(4) {
-        margin-bottom: 0; } }
+        margin-bottom: 0; }
     html body #wrapper main#home section#recent-resource div#resource-content a {
       display: block;
       text-decoration: none; }
       html body #wrapper main#home section#recent-resource div#resource-content a img {
-        width: 100%;
+        display: inline-block;
+        width: 30%;
         vertical-align: top; }
       html body #wrapper main#home section#recent-resource div#resource-content a div.resource-info {
         position: relative;
-        margin-top: 10px;
-        width: 100%; }
+        padding: 0 0 0 20px;
+        width: 65%;
+        display: inline-block; }
         html body #wrapper main#home section#recent-resource div#resource-content a div.resource-info h3.resource-date {
-          font-size: 12px;
+          font-size: 14px;
           margin-bottom: 10px; }
-        html body #wrapper main#home section#recent-resource div#resource-content a div.resource-info h2.resource-title {
-          font-size: 18px; }
         html body #wrapper main#home section#recent-resource div#resource-content a div.resource-info h3.resource-author {
-          font-size: 12px;
+          font-size: 14px;
           font-weight: normal; }
         html body #wrapper main#home section#recent-resource div#resource-content a div.resource-info h4.resource-tags {
           font-weight: normal;
-          font-size: 12px; }
-          html body #wrapper main#home section#recent-resource div#resource-content a div.resource-info h4.resource-tags span:not(:last-child):after {
-            content: ','; }
-        html body #wrapper main#home section#recent-resource div#resource-content a div.resource-info div.resource-text {
-          margin: 10px 0;
-          font-size: 12px;
-          color: initial; }
-          html body #wrapper main#home section#recent-resource div#resource-content a div.resource-info div.resource-text h1 {
-            margin: 10px 0;
-            font-size: 13px; }
-          html body #wrapper main#home section#recent-resource div#resource-content a div.resource-info div.resource-text h2, html body #wrapper main#home section#recent-resource div#resource-content a div.resource-info div.resource-text h3, html body #wrapper main#home section#recent-resource div#resource-content a div.resource-info div.resource-text h4, html body #wrapper main#home section#recent-resource div#resource-content a div.resource-info div.resource-text h5, html body #wrapper main#home section#recent-resource div#resource-content a div.resource-info div.resource-text h6 {
-            margin: 5px 0;
-            font-size: 12px; }
-          html body #wrapper main#home section#recent-resource div#resource-content a div.resource-info div.resource-text p {
-            margin: 5px 0;
-            font-size: 12px; }
-    @media (min-width: 321px) {
-      html body #wrapper main#home section#recent-resource div#resource-content a img {
-        display: inline-block;
-        width: 30%; }
-      html body #wrapper main#home section#recent-resource div#resource-content a div.resource-info {
-        display: inline-block;
-        margin-top: 0;
-        padding: 0 0 0 20px;
-        width: 65%; }
-        html body #wrapper main#home section#recent-resource div#resource-content a div.resource-info h3.resource-date {
           font-size: 14px; }
-        html body #wrapper main#home section#recent-resource div#resource-content a div.resource-info h2.resource-title {
-          font-size: initial; }
-        html body #wrapper main#home section#recent-resource div#resource-content a div.resource-info h3.resource-author {
-          font-size: 14px; }
-        html body #wrapper main#home section#recent-resource div#resource-content a div.resource-info h4.resource-tags {
-          font-size: 14px; }
-        html body #wrapper main#home section#recent-resource div#resource-content a div.resource-info div.resource-text {
+        html body #wrapper main#home section#recent-resource div#resource-content a div.resource-info p.resource-content {
           margin: 20px 0;
           font-size: 14px; }
-          html body #wrapper main#home section#recent-resource div#resource-content a div.resource-info div.resource-text h1 {
-            margin: 15px 0;
-            font-size: 15px; }
-          html body #wrapper main#home section#recent-resource div#resource-content a div.resource-info div.resource-text h2, html body #wrapper main#home section#recent-resource div#resource-content a div.resource-info div.resource-text h3, html body #wrapper main#home section#recent-resource div#resource-content a div.resource-info div.resource-text h4, html body #wrapper main#home section#recent-resource div#resource-content a div.resource-info div.resource-text h5, html body #wrapper main#home section#recent-resource div#resource-content a div.resource-info div.resource-text h6 {
-            margin: 10px 0;
-            font-size: 14px; }
-          html body #wrapper main#home section#recent-resource div#resource-content a div.resource-info div.resource-text p {
-            margin: 10px 0;
-            font-size: 14px; } }
     html body #wrapper main#home hr {
-      margin: 30px 0 10px 0;
+      margin: 50px 0 30px 0;
       height: 1px;
       border: 0;
       box-shadow: inset 0 6px 6px -6px #999; }
-    @media (min-width: 321px) {
-      html body #wrapper main#home hr {
-        margin: 50px 0 30px 0; } }
     html body #wrapper main#projects section#projects-list {
       width: 100%; }
       html body #wrapper main#projects section#projects-list > h2 {
@@ -350,7 +250,7 @@ html {
           vertical-align: top;
           border: 1px solid #aaa;
           border-radius: 3px;
-          box-shadow: 6px 0px 7px -7px #888888, 0px 6px 7px -7px #888888; }
+          box-shadow: 6px 0px 7px -7px #888, 0px 6px 7px -7px #888; }
           html body #wrapper main#projects section#projects-list ul li a {
             text-decoration: none; }
             html body #wrapper main#projects section#projects-list ul li a img {
@@ -381,7 +281,7 @@ html {
           background-color: #fff;
           border: 1px solid #777;
           border-radius: 3px;
-          box-shadow: 6px 0px 7px -7px #888888, 0px 6px 7px -7px #888888;
+          box-shadow: 6px 0px 7px -7px #888, 0px 6px 7px -7px #888;
           cursor: pointer;
           outline: none; }
       html body #wrapper main#students section#class-select ul#class-select-list li:first-child {
@@ -402,7 +302,7 @@ html {
           margin-bottom: 20px;
           border: 1px solid #aaa;
           border-radius: 3px;
-          box-shadow: 6px 0px 7px -7px #888888, 0px 6px 7px -7px #888888; }
+          box-shadow: 6px 0px 7px -7px #888, 0px 6px 7px -7px #888; }
           html body #wrapper main#students section#students-list ul li img {
             display: inline-block;
             width: 20%;
@@ -653,21 +553,18 @@ html {
       html body #wrapper footer ul {
         margin: 0 auto;
         padding: 15px 0;
-        width: 90%;
+        width: 65%;
         list-style: none;
         text-align: center; }
         html body #wrapper footer ul li {
           padding: 0 5px;
+          display: inline-block;
           color: #fff;
-          font-size: 12px; }
-      @media (min-width: 321px) {
-        html body #wrapper footer ul {
-          width: 65%; }
-          html body #wrapper footer ul li {
-            display: inline-block;
-            font-size: 14px;
-            border-right: 1px solid #5b3b64; }
-          html body #wrapper footer ul li:last-child {
-            border: none; } }
+          font-size: 14px;
+          border-right: 1px solid #5b3b64; }
+        html body #wrapper footer ul li:last-child {
+          border: none; }
     html body #wrapper h1, html body #wrapper h2, html body #wrapper h3, html body #wrapper h4, html body #wrapper p {
       color: #333; }
+
+/*# sourceMappingURL=style.css.map */
