@@ -59,7 +59,7 @@ var initializeClassSelectButtons = function() {
 
 	// User did not select specific class year
 	if( !checkURLForString('class_year') ) {
-		$active = $('ul#class-select-list li:first');
+		$active = $('ul#class-select-list li:last-child');
 	}
 	// User did select specific class year
 	else {
@@ -74,6 +74,32 @@ var initializeClassSelectButtons = function() {
 	// Change button css and show correct students
 	$active.addClass('active');
 	showStudents($active.children('button'));
+
+	return;
+};
+// Initialize year select buttons on Projects page
+var initializeYearSelectButtons = function() {
+
+	// Global (ish)
+	var $active;
+
+	// User did not select specific class year
+	if( !checkURLForString('class_year') ) {
+		$active = $('ul#class-year-select-list li:last-child');
+	}
+	// User did select specific class year
+	else {
+		var classYear = window.location.search.replace('?class_year=', '');
+		$('ul#class-year-select-list li').each(function() {
+			if( $(this).children('button').val() == classYear ) {
+				$active = $(this);
+			}
+		});
+	}
+
+	// Change button css and show correct students
+	$active.addClass('active');
+	showProjects($active.children('button'));
 
 	return;
 };
@@ -95,6 +121,25 @@ var showStudents = function($selection) {
 
 	return;
 };
+// Show projects on Projects page
+var showProjects = function($selection) {
+
+	// Add active class for button styling
+	$selection.parent().siblings().removeClass('active');
+	$selection.parent().addClass('active');
+
+	// Show correct students
+	if( $selection.val() == "all" ) {
+		console.log('hi');
+		$('section#projects-list ul li').show();
+	}
+	else {
+		$('section#projects-list ul li').hide();
+		$('section#projects-list ul li.class-year-' + $selection.val()).show();
+	}
+
+	return;
+};
 // Check URL for a string
 var checkURLForString = function(s) {
 	if( window.location.href.indexOf(s) > -1 ) {
@@ -106,7 +151,12 @@ var checkURLForString = function(s) {
 // Edit URL text
 var editURLText = function($selection) {
 	var current = window.location.pathname;
-	var newHref = current.replace('students/', 'students/?class_year=' + $selection.val());
+	if( checkURLForString('projects') ) {
+		var newHref = current.replace('projects/', 'projects/?class_year=' + $selection.val());	
+	}
+	else if( checkURLForString('students') ) {
+		var newHref = current.replace('students/', 'students/?class_year=' + $selection.val());
+	}
 	history.replaceState('data', '', newHref);
 
 	return;
@@ -257,6 +307,17 @@ $(window).load(function() {
 			$('button#slider-next').click(function() {
 				var $target = $('div#slider-wrapper ul li.active').next();
 				toGalleryItem($target, maxScrollPosition);
+			});
+			break;
+
+		case 'projects':
+			initializeYearSelectButtons();
+
+			// Handle year button click
+			$('ul#class-year-select-list li button').click(function() {
+				var $selection = $(this);
+				editURLText($selection);
+				showProjects($selection);
 			});
 			break;
 

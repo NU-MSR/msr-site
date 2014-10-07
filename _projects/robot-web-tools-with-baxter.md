@@ -4,6 +4,7 @@ image:              /robot-web-tools.jpg
 title:              Robot Web Tools with Baxter
 author:             Jarvis Schultz
 date:               August 29th, 2014
+class_year:         2014
 demo:               https://github.com/jonrovira/robot_web_tools
 requirements:       [ros-hydro-ros-base (basic ROS installation), 
                     ros-hydro-rosbridge-server (rosbridge_server),

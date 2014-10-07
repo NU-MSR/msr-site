@@ -298,13 +298,51 @@ html {
 			/* Projects index */
 			main#projects {
 
-				section#projects-list {
-					width: 100%;
+				section#class-year-select {
 
 					> h2 {
 						margin: 20px 0;
 						font-size: 25px;
 					}
+					> h3 {
+						font-size: 16px;
+					}
+					ul#class-year-select-list {
+						margin-top: 5px;
+
+						li {
+							display: inline-block;
+							margin-left: 5px;
+
+							button {
+								padding: 6px 10px;
+								color: #555;
+								font-size: 14px;
+								background-color: #fff;
+								border: 1px solid #777;
+								border-radius: 3px;
+								box-shadow: $box-shadow;
+						        cursor: pointer;
+						        outline: none;
+							}
+						}
+						li:first-child {
+							margin: 0;
+						}
+						li.active {
+
+							button {
+								color: #fff;
+								background-color: #18A9FF;
+								border: none;
+							}
+						}
+					}
+				}
+				section#projects-list {
+					margin-top: 20px;
+					width: 100%;
+
 					ul {
 						list-style: none;
 
