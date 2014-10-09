@@ -142,45 +142,47 @@ html {
           padding: 25px 0; } }
     html body #wrapper main {
       margin: 0 auto;
-      padding: 15px 40px 25px 40px;
-      width: calc(65% - 80px);
+      padding: 0px 15px 25px 15px;
+      width: calc(90% - 30px);
       max-width: calc(1000px - 80px);
       background-color: #fff;
       box-shadow: 6px 0px 10px -7px #888, -6px 0px 10px -7px #888; }
       html body #wrapper main h1 {
         margin-bottom: 20px;
         font-size: 45px; }
-    html body #wrapper main#home section {
-      margin-bottom: 30px; }
-      html body #wrapper main#home section > h2 {
-        display: inline-block;
-        vertical-align: middle;
-        margin: 20px 0;
-        font-size: 25px; }
-      html body #wrapper main#home section button.see-all {
-        display: inline-block;
-        margin-left: 5px;
-        padding: 6px 10px;
+      @media (min-width: 700px) {
+        html body #wrapper main {
+          padding: 15px 40px 25px 40px;
+          width: calc(65% - 80px); } }
+    html body #wrapper main#home section > h2 {
+      display: inline-block;
+      vertical-align: middle;
+      margin: 20px 0;
+      font-size: 16px; }
+    html body #wrapper main#home section button.see-all {
+      display: inline-block;
+      margin-left: 5px;
+      padding: 6px 10px;
+      color: #555;
+      font-size: 14px;
+      background-color: #fff;
+      border: 1px solid #777;
+      border-radius: 3px;
+      box-shadow: 6px 0px 7px -7px #888, 0px 6px 7px -7px #888;
+      cursor: pointer;
+      outline: none; }
+      html body #wrapper main#home section button.see-all a {
         color: #555;
-        font-size: 14px;
-        background-color: #fff;
-        border: 1px solid #777;
-        border-radius: 3px;
-        box-shadow: 6px 0px 7px -7px #888, 0px 6px 7px -7px #888;
-        cursor: pointer;
-        outline: none; }
-        html body #wrapper main#home section button.see-all a {
-          color: #555;
-          text-decoration: none; }
-      html body #wrapper main#home section button.see-all:active {
-        position: relative;
-        top: 1px; }
+        text-decoration: none; }
+    html body #wrapper main#home section button.see-all:active {
+      position: relative;
+      top: 1px; }
     html body #wrapper main#home section#recent-projects {
       width: 100%; }
       html body #wrapper main#home section#recent-projects div#slider-wrapper {
         position: relative;
         width: 100%;
-        height: 400px;
+        height: 200px;
         overflow: hidden;
         box-shadow: 6px 0px 7px -7px #888, 0px 6px 7px -7px #888; }
         html body #wrapper main#home section#recent-projects div#slider-wrapper ul {
@@ -198,73 +200,133 @@ html {
                 display: none; }
         html body #wrapper main#home section#recent-projects div#slider-wrapper button {
           position: absolute;
-          top: 50%;
+          top: 55%;
           margin-top: -40px;
-          width: 45px;
-          height: 90px;
+          width: 30px;
+          height: 60px;
           background-color: #333;
           border: none;
           opacity: 0.7;
           cursor: pointer;
           outline: none; }
           html body #wrapper main#home section#recent-projects div#slider-wrapper button i {
-            font-size: 60px;
+            font-size: 35px;
             color: #777; }
         html body #wrapper main#home section#recent-projects div#slider-wrapper button:hover {
           opacity: 0.9; }
         html body #wrapper main#home section#recent-projects div#slider-wrapper button#slider-prev {
           left: 0;
           margin-left: -8px;
-          border-radius: 0 90px 90px 0; }
+          border-radius: 0 70px 70px 0; }
         html body #wrapper main#home section#recent-projects div#slider-wrapper button#slider-next {
           right: 0;
           margin-right: -8px;
-          border-radius: 90px 0 0 90px; }
+          border-radius: 70px 0 0 70px; }
         html body #wrapper main#home section#recent-projects div#slider-wrapper div#slider-info {
           position: absolute;
           bottom: 0;
-          padding: 20px;
-          width: calc(100% - 40px);
-          height: 55px;
+          padding: 10px;
+          width: calc(100% - 20px);
+          height: 45px;
           background-color: #444;
           opacity: 0.8; }
           html body #wrapper main#home section#recent-projects div#slider-wrapper div#slider-info h2, html body #wrapper main#home section#recent-projects div#slider-wrapper div#slider-info p {
             color: #fff; }
           html body #wrapper main#home section#recent-projects div#slider-wrapper div#slider-info h2 {
-            margin-bottom: 5px; }
+            font-size: 15px; }
           html body #wrapper main#home section#recent-projects div#slider-wrapper div#slider-info p {
-            font-size: 14px; }
+            font-size: 10px; }
     html body #wrapper main#home section#about {
       width: 100%; }
+      html body #wrapper main#home section#about p {
+        font-size: 14px;
+        line-height: 22px; }
     html body #wrapper main#home section#recent-resource div#resource-content a {
       display: block;
       text-decoration: none; }
       html body #wrapper main#home section#recent-resource div#resource-content a img {
         display: inline-block;
-        width: 30%;
+        width: 100%;
         vertical-align: top; }
       html body #wrapper main#home section#recent-resource div#resource-content a div.resource-info {
         position: relative;
-        padding: 0 0 0 20px;
-        width: 65%;
+        padding: 10px 0 0 0;
+        width: 100%;
         display: inline-block; }
         html body #wrapper main#home section#recent-resource div#resource-content a div.resource-info h3.resource-date {
           font-size: 14px;
-          margin-bottom: 10px; }
+          margin-bottom: 5px; }
+        html body #wrapper main#home section#recent-resource div#resource-content a div.resource-info h2.resource-title {
+          font-size: 27px; }
         html body #wrapper main#home section#recent-resource div#resource-content a div.resource-info h3.resource-author {
           font-size: 14px;
           font-weight: normal; }
         html body #wrapper main#home section#recent-resource div#resource-content a div.resource-info h4.resource-tags {
           font-weight: normal;
           font-size: 14px; }
-        html body #wrapper main#home section#recent-resource div#resource-content a div.resource-info p.resource-content {
-          margin: 20px 0;
+        html body #wrapper main#home section#recent-resource div#resource-content a div.resource-info div.resource-text {
+          margin: 10px 0;
           font-size: 14px; }
     html body #wrapper main#home hr {
-      margin: 50px 0 30px 0;
+      margin: 30px 0 10px 0;
       height: 1px;
       border: 0;
       box-shadow: inset 0 6px 6px -6px #999; }
+    @media (min-width: 500px) {
+      html body #wrapper main#home section#recent-projects div#slider-wrapper {
+        height: 300px; }
+        html body #wrapper main#home section#recent-projects div#slider-wrapper button {
+          top: 50%;
+          width: 40px;
+          height: 80px; }
+          html body #wrapper main#home section#recent-projects div#slider-wrapper button i {
+            font-size: 45px; }
+        html body #wrapper main#home section#recent-projects div#slider-wrapper button#slider-prev {
+          border-radius: 0 80px 80px 0; }
+        html body #wrapper main#home section#recent-projects div#slider-wrapper button#slider-next {
+          border-radius: 80px 0 0 80px; }
+        html body #wrapper main#home section#recent-projects div#slider-wrapper div#slider-info {
+          height: 55px; }
+          html body #wrapper main#home section#recent-projects div#slider-wrapper div#slider-info h2 {
+            font-size: 1.5em; }
+          html body #wrapper main#home section#recent-projects div#slider-wrapper div#slider-info p {
+            font-size: 12px; } }
+    @media (min-width: 600px) {
+      html body #wrapper main#home section#recent-resource div#resource-content a img {
+        width: 30%; }
+      html body #wrapper main#home section#recent-resource div#resource-content a div.resource-info {
+        padding: 0 0 0 20px;
+        width: 60%; }
+        html body #wrapper main#home section#recent-resource div#resource-content a div.resource-info h3.resource-date {
+          margin-bottom: 10px; } }
+    @media (min-width: 700px) {
+      html body #wrapper main#home section > h2 {
+        font-size: 25px; }
+      html body #wrapper main#home section#recent-projects {
+        width: 100%; }
+        html body #wrapper main#home section#recent-projects div#slider-wrapper {
+          height: 400px; }
+          html body #wrapper main#home section#recent-projects div#slider-wrapper button {
+            width: 45px;
+            height: 90px; }
+            html body #wrapper main#home section#recent-projects div#slider-wrapper button i {
+              font-size: 60px; }
+          html body #wrapper main#home section#recent-projects div#slider-wrapper button#slider-prev {
+            border-radius: 0 90px 90px 0; }
+          html body #wrapper main#home section#recent-projects div#slider-wrapper button#slider-next {
+            border-radius: 90px 0 0 90px; }
+          html body #wrapper main#home section#recent-projects div#slider-wrapper div#slider-info {
+            padding: 20px;
+            width: calc(100% - 40px); }
+            html body #wrapper main#home section#recent-projects div#slider-wrapper div#slider-info h2 {
+              margin-bottom: 5px; }
+            html body #wrapper main#home section#recent-projects div#slider-wrapper div#slider-info p {
+              font-size: 14px; }
+      html body #wrapper main#home section#about p {
+        font-size: 16px;
+        line-height: 26px; }
+      html body #wrapper main#home hr {
+        margin: 50px 0 30px 0; } }
     html body #wrapper main#projects section#class-year-select > h2 {
       margin: 20px 0;
       font-size: 25px; }
