@@ -651,7 +651,9 @@ html {
     html body #wrapper main.resource ol, html body #wrapper main.resource ul {
       margin-left: 40px; }
     html body #wrapper main.resource h1.resource-title {
-      margin-bottom: 0; }
+      margin-top: 0;
+      margin-bottom: 0;
+      padding-top: 10px; }
     html body #wrapper main.resource h2.resource-author {
       margin: 0.2em 0 0 0;
       font-size: 1.00em;
@@ -664,6 +666,10 @@ html {
       margin-top: 0.2em;
       font-size: 0.95em;
       color: #555; }
+    @media (min-width: 700px) {
+      html body #wrapper main.resource h1.resource-title {
+        margin-top: 0.67em;
+        padding-top: 0; } }
     html body #wrapper main.project article {
       width: 100%; }
       html body #wrapper main.project article section.project-header {
