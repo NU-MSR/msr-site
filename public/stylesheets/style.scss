@@ -1220,7 +1220,7 @@ html {
 				ul {
 					margin: 0 auto;
 					padding: 15px 0;
-					width: $d-inner-width;
+					width: $m-inner-width;
 					max-width: $d-max-width;
 					list-style: none;
 					text-align: center;
@@ -1235,6 +1235,11 @@ html {
 					li:last-child {
 						border: none;
 					}
+				}
+				@media(min-width: $d-query) {
+					ul {
+						width: $d-inner-width;
+					}	
 				}
 			}
 			h1, h2, h3, h4, p {
