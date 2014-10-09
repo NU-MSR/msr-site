@@ -554,7 +554,8 @@ html {
 				section#class-year-select {
 
 					> h2 {
-						margin: 20px 0;
+						margin-bottom: 10px;
+						padding-top: 10px;
 						font-size: 25px;
 					}
 					> h3 {
@@ -565,10 +566,10 @@ html {
 
 						li {
 							display: inline-block;
-							margin-left: 5px;
+							margin-left: 2px;
 
 							button {
-								padding: 6px 10px;
+								padding: 4px;
 								color: #555;
 								font-size: 14px;
 								background-color: #fff;
@@ -602,8 +603,7 @@ html {
 						li {
 							display: inline-block;
 							margin-bottom: 20px;
-							width: calc(100% / 3 - 20px);
-							height: 390px;
+							width: 100%;
 							vertical-align: top;
 							border: 1px solid #aaa;
 							border-radius: 3px;
@@ -628,8 +628,52 @@ html {
 								}
 							}
 						}
-						li:nth-child(3n), li:nth-child(3n-1) {
-							margin-left: 20px;
+					}
+				}
+				@media(min-width: 500px) {
+					section#projects-list {
+
+						ul {
+
+							li {
+								width: calc(100% / 2 - 15px);
+							}
+							li:nth-child(2n) {
+								margin-left: 20px;
+							}
+						}
+					}
+				}
+				@media(min-width: 800px) {
+					section#class-year-select {
+
+						> h2 {
+							margin: 20px 0;
+							padding-top: 0;
+						}
+						ul#class-year-select-list {
+							margin-top: 5px;
+
+							li {
+								display: inline-block;
+								margin-left: 5px;
+
+								button {
+									padding: 6px 10px;
+								}
+							}
+						}
+					}
+					section#projects-list {
+
+						ul {
+
+							li {
+								width: calc(100% / 3 - 20px);
+							}
+							li:nth-child(3n) {
+								margin-left: 20px;
+							}
 						}
 					}
 				}

@@ -328,7 +328,8 @@ html {
       html body #wrapper main#home hr {
         margin: 50px 0 30px 0; } }
     html body #wrapper main#projects section#class-year-select > h2 {
-      margin: 20px 0;
+      margin-bottom: 10px;
+      padding-top: 10px;
       font-size: 25px; }
     html body #wrapper main#projects section#class-year-select > h3 {
       font-size: 16px; }
@@ -336,9 +337,9 @@ html {
       margin-top: 5px; }
       html body #wrapper main#projects section#class-year-select ul#class-year-select-list li {
         display: inline-block;
-        margin-left: 5px; }
+        margin-left: 2px; }
         html body #wrapper main#projects section#class-year-select ul#class-year-select-list li button {
-          padding: 6px 10px;
+          padding: 4px;
           color: #555;
           font-size: 14px;
           background-color: #fff;
@@ -361,8 +362,7 @@ html {
         html body #wrapper main#projects section#projects-list ul li {
           display: inline-block;
           margin-bottom: 20px;
-          width: calc(100% / 3 - 20px);
-          height: 390px;
+          width: 100%;
           vertical-align: top;
           border: 1px solid #aaa;
           border-radius: 3px;
@@ -378,8 +378,26 @@ html {
                 font-size: 16px; }
               html body #wrapper main#projects section#projects-list ul li a div.project-info p.project-overview {
                 font-size: 14px; }
-        html body #wrapper main#projects section#projects-list ul li:nth-child(3n), html body #wrapper main#projects section#projects-list ul li:nth-child(3n-1) {
-          margin-left: 20px; }
+    @media (min-width: 500px) {
+      html body #wrapper main#projects section#projects-list ul li {
+        width: calc(100% / 2 - 15px); }
+      html body #wrapper main#projects section#projects-list ul li:nth-child(2n) {
+        margin-left: 20px; } }
+    @media (min-width: 800px) {
+      html body #wrapper main#projects section#class-year-select > h2 {
+        margin: 20px 0;
+        padding-top: 0; }
+      html body #wrapper main#projects section#class-year-select ul#class-year-select-list {
+        margin-top: 5px; }
+        html body #wrapper main#projects section#class-year-select ul#class-year-select-list li {
+          display: inline-block;
+          margin-left: 5px; }
+          html body #wrapper main#projects section#class-year-select ul#class-year-select-list li button {
+            padding: 6px 10px; }
+      html body #wrapper main#projects section#projects-list ul li {
+        width: calc(100% / 3 - 20px); }
+      html body #wrapper main#projects section#projects-list ul li:nth-child(3n) {
+        margin-left: 20px; } }
     html body #wrapper main#students section#class-select > h2 {
       margin: 20px 0;
       font-size: 25px; }
