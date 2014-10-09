@@ -275,6 +275,11 @@ var searchResources = function(search) {
 		});
 	}
 };
+// Toggle the mobile navbar
+var toggleMobileNav = function() {
+	// Placeholder for minimize
+	$('nav#header-navigation > ul > li').fadeToggle(200);
+};
 
 
 
@@ -291,6 +296,10 @@ var maxScrollPosition;
  */
 
 $(window).load(function() {
+	// Toggle mobile navbar on navbar icon click
+	$('nav#header-navigation > ul > i').click(function() {
+		toggleMobileNav();
+	});	
 
 	// Start event listeners depending on which page is loaded
 	var page = checkWhichPage();

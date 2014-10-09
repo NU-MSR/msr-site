@@ -23,45 +23,92 @@ html {
     html body #wrapper header {
       width: 100%; }
       html body #wrapper header div#header-branding {
+        width: 100%;
         background: -webkit-linear-gradient(left, #490459, #490459, #823292, #490459);
         background: -moz-linear-gradient(right, #490459, #490459, #823292, #490459);
         background: linear-gradient(to right, #490459, #490459, #823292, #490459); }
         html body #wrapper header div#header-branding div#header-branding-inner {
           margin: 0 auto;
-          padding: 20px 0;
-          width: 65%; }
-          html body #wrapper header div#header-branding div#header-branding-inner img {
+          padding: 10px 0;
+          width: 90%;
+          max-width: 1000px; }
+          html body #wrapper header div#header-branding div#header-branding-inner img.h-img {
             display: inline-block;
-            margin: 0 70px 0 0;
-            width: 230px; }
-          html body #wrapper header div#header-branding div#header-branding-inner h2 {
+            width: 130px; }
+          html body #wrapper header div#header-branding div#header-branding-inner div.h-text-container {
             display: inline-block;
-            margin-left: 20px;
-            color: #ffffff;
-            font-size: 35px;
-            line-height: 230px;
             vertical-align: top;
-            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5); }
+            width: calc(100% - 130px - 5px); }
+            html body #wrapper header div#header-branding div#header-branding-inner div.h-text-container h2.h-text {
+              display: table;
+              margin: 0 auto;
+              padding: 6px 0;
+              vertical-align: top;
+              text-align: right;
+              color: #fff;
+              font-size: 16px;
+              text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5); }
       html body #wrapper header nav#header-navigation {
         background-color: #31043f; }
         html body #wrapper header nav#header-navigation > ul {
           margin: 0 auto;
-          width: 65%;
-          list-style: none; }
+          width: 90%;
+          list-style: none;
+          overflow: auto; }
+          html body #wrapper header nav#header-navigation > ul > i {
+            float: right;
+            padding: 11px 0;
+            font-size: 25px;
+            color: #fff;
+            cursor: pointer; }
           html body #wrapper header nav#header-navigation > ul > li {
+            display: none;
+            clear: both;
             position: relative;
+            text-align: right; }
+            html body #wrapper header nav#header-navigation > ul > li > a {
+              text-decoration: none;
+              font-size: 15px;
+              color: #fff; }
+            html body #wrapper header nav#header-navigation > ul > li ul {
+              display: none; }
+      @media (min-width: 404px) {
+        html body #wrapper header div#header-branding div#header-branding-inner div.h-text-container h2.h-text {
+          padding: 15px 0; } }
+      @media (min-width: 500px) {
+        html body #wrapper header div#header-branding div#header-branding-inner img.h-img {
+          width: 170px; }
+        html body #wrapper header div#header-branding div#header-branding-inner div.h-text-container {
+          width: calc(100% - 170px - 5px); }
+          html body #wrapper header div#header-branding div#header-branding-inner div.h-text-container h2.h-text {
+            padding: 21px 0;
+            font-size: 18px; } }
+      @media (min-width: 700px) {
+        html body #wrapper header div#header-branding div#header-branding-inner {
+          padding: 30px 0;
+          width: 65%; }
+          html body #wrapper header div#header-branding div#header-branding-inner img.h-img {
+            width: 190px; }
+          html body #wrapper header div#header-branding div#header-branding-inner div.h-text-container {
+            width: calc(100% - 190px - 5px); }
+            html body #wrapper header div#header-branding div#header-branding-inner div.h-text-container h2.h-text {
+              padding: 9px 0;
+              font-size: 22px; }
+        html body #wrapper header nav#header-navigation > ul {
+          margin: 0 auto;
+          width: 65%;
+          max-width: 1000px; }
+          html body #wrapper header nav#header-navigation > ul > i {
+            display: none; }
+          html body #wrapper header nav#header-navigation > ul > li {
             display: inline-block;
             width: calc(100% / 4 - 5px);
             border-right: 1px solid #5b3b64; }
             html body #wrapper header nav#header-navigation > ul > li > a {
               display: block;
               padding: 11px 0;
-              text-align: center;
-              text-decoration: none;
-              font-size: 15px;
-              color: #fff; }
+              text-align: center; }
             html body #wrapper header nav#header-navigation > ul > li ul {
-              display: none;
               position: absolute;
               top: 39px;
               left: -5px;
@@ -78,14 +125,26 @@ html {
                 font-size: 13px; }
               html body #wrapper header nav#header-navigation > ul > li ul li:last-child {
                 padding-bottom: 5px; }
-          html body #wrapper header nav#header-navigation > ul > li:first-child {
+          html body #wrapper header nav#header-navigation > ul > li:nth-child(2) {
             border-left: 1px solid #5b3b64; }
           html body #wrapper header nav#header-navigation > ul > li:hover ul {
-            display: block; }
+            display: block; } }
+      @media (min-width: 850px) {
+        html body #wrapper header div#header-branding div#header-branding-inner img.h-img {
+          width: 230px; }
+        html body #wrapper header div#header-branding div#header-branding-inner div.h-text-container {
+          width: calc(100% - 230px - 5px); }
+          html body #wrapper header div#header-branding div#header-branding-inner div.h-text-container h2.h-text {
+            padding: 8px 0;
+            font-size: 30px; } }
+      @media (min-width: 1019px) {
+        html body #wrapper header div#header-branding div#header-branding-inner div.h-text-container h2.h-text {
+          padding: 25px 0; } }
     html body #wrapper main {
       margin: 0 auto;
       padding: 15px 40px 25px 40px;
       width: calc(65% - 80px);
+      max-width: calc(1000px - 80px);
       background-color: #fff;
       box-shadow: 6px 0px 10px -7px #888, -6px 0px 10px -7px #888; }
       html body #wrapper main h1 {
@@ -549,6 +608,7 @@ html {
         margin: 0 auto;
         padding: 15px 0;
         width: 65%;
+        max-width: 1000px;
         list-style: none;
         text-align: center; }
         html body #wrapper footer ul li {
