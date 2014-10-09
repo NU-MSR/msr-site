@@ -480,10 +480,9 @@ html {
     html body #wrapper main#resources {
       overflow: auto; }
       html body #wrapper main#resources section#tags-list {
-        float: right;
+        float: left;
         margin-top: 20px;
-        width: 200px;
-        text-align: right;
+        width: 100%;
         overflow: auto; }
         html body #wrapper main#resources section#tags-list > h2 {
           font-size: 18px; }
@@ -492,83 +491,88 @@ html {
           margin-top: 6px;
           list-style: none; }
           html body #wrapper main#resources section#tags-list ul li {
+            display: inline-block;
+            margin-right: 10px;
             color: #3c7fff;
             font-size: 14px;
             cursor: pointer; }
           html body #wrapper main#resources section#tags-list ul li.clicked {
             color: #777;
             font-size: 15px; }
-      html body #wrapper main#resources section#resources-search > h2 {
-        margin: 20px 0;
-        font-size: 25px; }
-      html body #wrapper main#resources section#resources-search form {
-        overflow: auto;
-        margin-bottom: 20px;
-        width: 409px; }
-        html body #wrapper main#resources section#resources-search form input#search-bar {
-          float: left;
-          padding: 10px 8px;
-          width: 280px;
-          height: 20px;
-          font-style: bold;
-          font-size: 15px;
-          background-color: #eee;
-          border: none;
-          outline: none; }
-        html body #wrapper main#resources section#resources-search form input#search-bar:focus {
-          background-color: #fff;
-          box-shadow: 0 0 1px rgba(0, 0, 0, 0.8) inset; }
-        html body #wrapper main#resources section#resources-search form input#search-bar::-webkit-input-placeholder {
-          color: #666;
-          font-weight: normal;
-          font-style: italic; }
-        html body #wrapper main#resources section#resources-search form input#search-bar:-moz-placeholder {
-          color: #666;
-          font-weight: normal;
-          font-style: italic; }
-        html body #wrapper main#resources section#resources-search form input#search-bar:-ms-input-placeholder {
-          color: #666;
-          font-weight: normal;
-          font-style: italic; }
-        html body #wrapper main#resources section#resources-search form button.search-button {
-          float: left;
-          position: relative;
-          height: 40px;
-          font-style: bold;
-          font-size: 14px/40px;
-          color: #fff;
-          text-transform: uppercase;
-          text-shadow: 0 -1px rgba(0, 0, 0, 0.3);
-          background-color: #60a5fa;
-          border: none;
-          cursor: pointer;
-          outline: none; }
-        html body #wrapper main#resources section#resources-search form button.search-button:hover {
-          background-color: #7DBAFA; }
-        html body #wrapper main#resources section#resources-search form button.search-button:active, html body #wrapper main#resources section#resources-search form button:focus {
-          background-color: #4484FA; }
-        html body #wrapper main#resources section#resources-search form button.search-button::-moz-focus-inner {
-          border: none;
-          padding: 0; }
-        html body #wrapper main#resources section#resources-search form button#search-submit {
-          width: 110px;
-          border-radius: 0 3px 3px 0; }
-        html body #wrapper main#resources section#resources-search form button#search-submit:before {
-          content: '';
-          position: absolute;
-          top: 12px;
-          left: -6px;
-          border-width: 8px;
-          border-style: solid solid solid none;
-          border-color: transparent #60A5FA transparent; }
-        html body #wrapper main#resources section#resources-search form button#search-submit:hover:before {
-          border-right-color: #7DBAFA; }
-        html body #wrapper main#resources section#resources-search form button#search-submit:focus:before, html body #wrapper main#resources section#resources-search form button#search-submit:active:before {
-          border-right-color: #4484FA; }
+      html body #wrapper main#resources section#resources-search {
+        clear: both; }
+        html body #wrapper main#resources section#resources-search > h2 {
+          margin: 20px 0;
+          padding-top: 20px;
+          font-size: 25px; }
+        html body #wrapper main#resources section#resources-search form {
+          overflow: auto;
+          margin-bottom: 20px;
+          width: 100%; }
+          html body #wrapper main#resources section#resources-search form input#search-bar {
+            float: left;
+            padding: 10px 8px;
+            width: calc(100% - 126px);
+            height: 20px;
+            font-style: bold;
+            font-size: 15px;
+            background-color: #eee;
+            border: none;
+            outline: none; }
+          html body #wrapper main#resources section#resources-search form input#search-bar:focus {
+            background-color: #fff;
+            box-shadow: 0 0 1px rgba(0, 0, 0, 0.8) inset; }
+          html body #wrapper main#resources section#resources-search form input#search-bar::-webkit-input-placeholder {
+            color: #666;
+            font-weight: normal;
+            font-style: italic; }
+          html body #wrapper main#resources section#resources-search form input#search-bar:-moz-placeholder {
+            color: #666;
+            font-weight: normal;
+            font-style: italic; }
+          html body #wrapper main#resources section#resources-search form input#search-bar:-ms-input-placeholder {
+            color: #666;
+            font-weight: normal;
+            font-style: italic; }
+          html body #wrapper main#resources section#resources-search form button.search-button {
+            float: left;
+            position: relative;
+            height: 40px;
+            font-style: bold;
+            font-size: 14px/40px;
+            color: #fff;
+            text-transform: uppercase;
+            text-shadow: 0 -1px rgba(0, 0, 0, 0.3);
+            background-color: #60a5fa;
+            border: none;
+            cursor: pointer;
+            outline: none; }
+          html body #wrapper main#resources section#resources-search form button.search-button:hover {
+            background-color: #7DBAFA; }
+          html body #wrapper main#resources section#resources-search form button.search-button:active, html body #wrapper main#resources section#resources-search form button:focus {
+            background-color: #4484FA; }
+          html body #wrapper main#resources section#resources-search form button.search-button::-moz-focus-inner {
+            border: none;
+            padding: 0; }
+          html body #wrapper main#resources section#resources-search form button#search-submit {
+            width: 110px;
+            border-radius: 0 3px 3px 0; }
+          html body #wrapper main#resources section#resources-search form button#search-submit:before {
+            content: '';
+            position: absolute;
+            top: 12px;
+            left: -6px;
+            border-width: 8px;
+            border-style: solid solid solid none;
+            border-color: transparent #60A5FA transparent; }
+          html body #wrapper main#resources section#resources-search form button#search-submit:hover:before {
+            border-right-color: #7DBAFA; }
+          html body #wrapper main#resources section#resources-search form button#search-submit:focus:before, html body #wrapper main#resources section#resources-search form button#search-submit:active:before {
+            border-right-color: #4484FA; }
       html body #wrapper main#resources section#resources-list {
         width: 100%; }
         html body #wrapper main#resources section#resources-list > ul {
-          width: calc(100% - 250px);
+          width: 100%;
           list-style: none; }
           html body #wrapper main#resources section#resources-list > ul > li {
             margin-bottom: 10px;
@@ -606,6 +610,31 @@ html {
                 display: none; }
           html body #wrapper main#resources section#resources-list > ul li.hidden-by-search, html body #wrapper main#resources section#resources-list > ul li.hidden-by-tags {
             display: none; }
+      @media (min-width: 850px) {
+        html body #wrapper main#resources section#tags-list {
+          float: right;
+          width: 200px;
+          text-align: right; }
+          html body #wrapper main#resources section#tags-list ul li {
+            display: block;
+            margin-right: 0; }
+        html body #wrapper main#resources section#resources-search {
+          clear: none;
+          width: calc(100% - 210px); }
+          html body #wrapper main#resources section#resources-search > h2 {
+            padding-top: 0; }
+          html body #wrapper main#resources section#resources-search form {
+            overflow: auto;
+            margin-bottom: 20px;
+            width: 100%;
+            max-width: 409px; }
+            html body #wrapper main#resources section#resources-search form input#search-bar {
+              width: calc(100% - 126px);
+              max-width: 280px; }
+        html body #wrapper main#resources section#resources-list {
+          width: 100%; }
+          html body #wrapper main#resources section#resources-list > ul {
+            width: calc(100% - 250px); } }
     html body #wrapper main.resource h1 {
       margin: 0.67em 0;
       font-size: 2em; }
