@@ -1,0 +1,22 @@
+title:              ME 495 - Embedded Systems in Robotics
+description:        ""
+url:                "http://localhost:4000"
+baseurl:            /msr-site
+
+image_path:         /public/images
+
+markdown:           kramdown
+permalink:          pretty
+
+collections:
+  projects:
+    output: true
+    permalink: /projects/:path/
+    years: [2011, 2012, 2013, 2014]
+  students:
+    output: false
+    years: [2011, 2012, 2013, 2014]
+  resources:
+    output: true
+    permalink: /resources/:path/
+    tags: [navigation, manipulation, vision, perception, artificial intelligence, haptics, natural language processing, actuation, sensing, locomotion, human-robot interaction, autonomy, dynamics, kinematics, control loops, trajectory planning, interpolation, inverse kinematics, forward kinematics, jacobian matrix, optimization, algorithms, machining, assembly, ROS, linux, matlab, c++, python, probabilistic data structures, search, programming]

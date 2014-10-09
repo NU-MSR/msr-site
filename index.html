@@ -1,0 +1,71 @@
+---
+layout: default
+title:  Home
+about:  Lorem ipsum dolor sit amet, ne ius unum solet, denique detraxit in sed, id dicat inimicus has. Eam dico option in. Ne qui erat graeci. Scripta utroque temporibus ne est, tempor laboramus sed ut. Sed probo definitiones cu, cum ut exerci evertitur, indoctum sapientem per eu. Nec te eirmod vocent dolorem, eu nec labores urbanitas. Qui wisi ubique libris in, et erant putant habemus nec. Tamquam copiosae mnesarchum duo no. Cum no utamur tritani evertitur, vel ex munere petentium salutatus, ei verear labitur sententiae nam. Te erat possim detracto has, mei ad tamquam aliquid.
+---
+
+<main id="home">
+
+	<section id="recent-projects">
+		<h2>Recent Projects</h2>
+		<button class="see-all"><a href="{{ site.baseurl }}/projects/">See all</a></button>
+		<div id="slider-wrapper">
+			<ul>
+				{% for project in site.projects %}
+					{% if project.show_on_home %}
+						<li>
+							<a href="{{ site.baseurl }}{{ project.url }}">
+								<!-- <img src="http://unsplash.it/248/250?random"> -->
+								<img src="http://unsplash.it/1130/400?random">
+								<h2>{{ project.title }}</h2>
+								<p>{{ project.overview | truncatewords: 18 }}</p>
+							</a>
+						</li>
+					{% endif %}
+				{% endfor %}
+			</ul>
+			<button id="slider-prev"><i class="fa fa-caret-left"></i></button>
+			<button id="slider-next"><i class="fa fa-caret-right"></i></button>
+			<div id="slider-info">
+				<h2 class="slider-title"></h2>
+				<p class="slider-content"></p>
+			</div>
+		</div>
+	</section>
+	
+	<hr>
+
+	<section id="about">
+		<h2>About The Program</h2>
+		<p>{{ page.about }}</p>
+	</section>
+
+	<hr> 
+
+	<section id="recent-resource">
+		<h2>Recent Resources Post</h2>
+		<button class="see-all"><a href="{{ site.baseurl }}/resources/">See all</a></button>
+		<div id="resource-content">
+			{% for resource in site.resources limit: 1 %}
+				<a href="{{ site.baseurl }}{{ resource.url }}">
+					<img src="http://unsplash.it/350?random">
+					<div class="resource-info">
+						<h3 class="resource-date">{{ resource.date }}</h3>
+						<h2 class="resource-title">{{ resource.title }}</h2>
+						<h3 class="resource-author">Written by {{ resource.author }}</h3>
+						<h4 class="resource-tags">
+							Tags: 
+							{% for tag in resource.tags %}
+								<span>{{ tag }}</span>
+							{% endfor %}
+						</h4>
+						<div class="resource-text">
+							{{ resource.content | truncatewords: 80 }}
+						</div>
+					</div>
+				</a>
+			{% endfor %}
+		</div>
+	</section>
+
+</main>
