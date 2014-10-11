@@ -8,12 +8,44 @@
 Jekyll is a simple, blog-aware, static site generator. It takes a template directory containing raw text files in various formats, runs it through Markdown and Liquid converters, and spits out a complete, ready-to-publish static website suitable for serving with your favorite web server. Jekyll also happens to be the engine behind GitHub Pages, which means you can use Jekyll to host your project's page, blog, or website from GitHub's servers for free (taken from Jekyll's website: http://jekyllrb.com/docs/home/).
 
 ### Get your workstation set up
-* Install <a href="https://www.ruby-lang.org/en/downloads/>Ruby</a>
-* Install <a href="rubygems.org/pages/download">RubyGems</a>
-* Install <a href="nodejs.org">NodeJS</a>
-* Install <a href="jekyllrb.com/docs/installation">Jekyll</a>
 
-### Basic Usage (recommended)
+To test your website locally, you will need several different packages. Follow the links below to install:
+
+* <a href="https://www.ruby-lang.org/en/downloads/">Ruby</a>
+* <a href="http://rubygems.org/pages/download">RubyGems</a>
+* <a href="http://nodejs.org">NodeJS</a>
+* <a href="http://jekyllrb.com/docs/installation">Jekyll</a>
+
+To install from `apt-get`, you can just run ``` sudo apt-get install ruby
+ruby-dev nodejs nodejs-dev rubygems jekyll ``` On Ubuntu 14.04, the versions of
+`ruby` and `jekyll` that are on `apt-get` are a bit out of date. Thus, if you
+install all of the above packages from `apt-get` using the above command, you
+are likely to get errors when running the commands in the [Basic Usage](#basic)
+section below. If you see errors about the `--watch` variable, run the following
+commands to use `rvm` (Ruby Version Manager) to install a new version of `ruby`
+and `jekyll`:
+
+```
+sudo apt-get install libgdbm-dev libncurses5-dev automake libtool bison libffi-dev
+curl -L https://get.rvm.io | bash -s stable
+source ~/.rvm/scripts/rvm
+echo "source ~/.rvm/scripts/rvm" >> ~/.bashrc
+rvm install ruby --latest
+echo "gem: --no-ri --no-rdoc" > ~/.gemrc
+gem update --system
+gem install jekyll
+```
+* line 1 installs dependencies for `rvm`
+* lines 2-4 configure your environment to use `ruby` versions installed from
+`rvm` instead of from `apt-get`
+* line 5 updates `rvm` itself
+* line 6 sets `gem` to not install documentation locally (this is optional)
+* line 7 updates `gem`
+* line 8 installs the latest `jekyll`
+
+
+
+### Basic Usage (recommended) <a name="basic"></a>
 In one terminal, build the jekyll site, watching for any changes (run in site root directory)
 ```
 $  jekyll build --watch
@@ -98,13 +130,13 @@ This first item tells Jekyll to take all of the markup in index.html and plug it
 The second item tells Jekyll to create a variable, page.title, that you can use in the markup of the template. For example, in _layouts/default.html, you could write:
 ```
 <head>
-	<title>{{ page.title }}</title>
+    <title>{{ page.title }}</title>
 </head>
 ```
 and that would render as:
 ```
 <head>
-	<title>Home</title>
+    <title>Home</title>
 </head>
 ```
 
@@ -138,20 +170,20 @@ summary:    Lorem ipsum dolor sit amet, an qui...
 This file represents a student in the students collection and only contains YAML front matter. You can see how powerful collections are if we take a look at a snippet of students.html:
 ```
 <section id="students-list">
-	<ul>
-		{% for student in site.students %}
-			<li id="{{ student.first_name }}-{{ student.last_name }}" class="class-year-{{ student.class_year }}">
-				<img src="http://unsplash.it/500?random">
-				<div class="student-info">
-					<h2 class="student-name">{{ student.name }}</h2>
-					<h3 class="student-year">Class of {{ student.class_year }}</h3>
-					<h3 class="student-focuses">Focuses: {{ student.focus }}</h3>
-					<h3 class="student-website">Website: <a href="{{ student.website }}">{{ student.website }}</a></h3>
-					<p class="student-summary">{{ student.summary }}</p>
-				</div>
-			</li>
-		{% endfor %}
-	</ul>
+    <ul>
+        {% for student in site.students %}
+            <li id="{{ student.first_name }}-{{ student.last_name }}" class="class-year-{{ student.class_year }}">
+                <img src="http://unsplash.it/500?random">
+                <div class="student-info">
+                    <h2 class="student-name">{{ student.name }}</h2>
+                    <h3 class="student-year">Class of {{ student.class_year }}</h3>
+                    <h3 class="student-focuses">Focuses: {{ student.focus }}</h3>
+                    <h3 class="student-website">Website: <a href="{{ student.website }}">{{ student.website }}</a></h3>
+                    <p class="student-summary">{{ student.summary }}</p>
+                </div>
+            </li>
+        {% endfor %}
+    </ul>
 </section>
 ```
 The ```{% %}``` tags represent liquid syntax and their contents are processed by Jekyll to render static HTML in the final site. You can see that all of the students in the students collection can be referenced with ```site.students``` and iterated through with a for loop. In this specific for loop, for each student in the students collection, we pull their name, class year, academic focus, website address, and summary using ```{{ }}``` tags. All of a particular student's information is defined in their markdown file just like Jon's which we saw above. You can find more useful information about collections in Jekyll's website (http://jekyllrb.com/docs/collections/).
@@ -193,10 +225,9 @@ requirements:       [python-wstool,
                     Baxter Simulation repository (must request access by emailing RSDK.support@rethinkrobotics.com]
 overview:           Learn how to quickly get a Baxter simulation running in Gazebo.
                     Execute the joint position keyboard example in the simulation.
-show_on_home:       true
 ---
 ```
-The front matter item, "show_on_home" determines if that project will appear in the project slideshow on the Home page. Following that front matter, just add content in normal markdown.
+Following that front matter, just add content in normal markdown.
 
 ### Adding Resources
 Adding a resource is simply a matter of creating a file in the _resources directory with the file name in the following format:
@@ -233,7 +264,6 @@ website:    http://google.com
 summary:    Lorem ipsum dolor sit amet, an...
 ---
 ```
-
 
 
 
