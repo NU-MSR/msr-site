@@ -1236,6 +1236,10 @@ html {
 						color: #fff;
 						font-size: 14px;
 						border-right: 1px solid #5b3b64;
+
+						address {
+							font-style: normal;
+						}
 					}
 					li:last-child {
 						border: none;

@@ -30,7 +30,9 @@ url: index.html
 					<div class="student-info">
 						<h2 class="student-name">{{ student.name }}</h2>
 						<h3 class="student-year">Class of {{ student.class_year }}</h3>
-						<h3 class="student-focuses">Focuses: {{ student.focus }}</h3>
+						{% if student.focus %}
+							<h3 class="student-focuses">Focuses: {{ student.focus }}</h3>
+						{% endif %}
 						<h3 class="student-website">Website: <a target="_blank" href="{{ student.website }}">{{ student.website }}</a></h3>
 						<p class="student-summary">{{ student.summary }}</p>
 					</div>

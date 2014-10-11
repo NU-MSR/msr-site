@@ -792,6 +792,8 @@ html {
           color: #fff;
           font-size: 14px;
           border-right: 1px solid #5b3b64; }
+          html body #wrapper footer ul li address {
+            font-style: normal; }
         html body #wrapper footer ul li:last-child {
           border: none; }
       @media (min-width: 700px) {
