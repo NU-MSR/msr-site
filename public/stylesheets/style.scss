@@ -160,6 +160,7 @@ html {
 							margin: 0 auto;
 							width: $d-inner-width;
 							max-width: $d-max-width;
+							overflow: visible;
 
 							> i {
 								display: none;
@@ -1070,8 +1071,12 @@ html {
 				}
 				h4.resource-tags {
 					margin-top: 0.2em;
-					font-size: 0.95em;
-					color: #555;
+					font-size: 0.85em;
+					color: #999;
+
+					span:not(:last-child):after {
+						content: ',';
+					}
 				}
 				@media(min-width: $d-query) {
 					h1.resource-title {

@@ -274,11 +274,12 @@ var searchResources = function(search) {
 			}
 		});
 	}
+	return;
 };
 // Toggle the mobile navbar
 var toggleMobileNav = function() {
-	// Placeholder for minimize
 	$('nav#header-navigation > ul > li').fadeToggle(200);
+	return;
 };
 
 

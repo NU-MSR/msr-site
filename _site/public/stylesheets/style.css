@@ -97,7 +97,8 @@ html {
         html body #wrapper header nav#header-navigation > ul {
           margin: 0 auto;
           width: 65%;
-          max-width: 1000px; }
+          max-width: 1000px;
+          overflow: visible; }
           html body #wrapper header nav#header-navigation > ul > i {
             display: none; }
           html body #wrapper header nav#header-navigation > ul > li {
@@ -664,8 +665,10 @@ html {
       color: #444; }
     html body #wrapper main.resource h4.resource-tags {
       margin-top: 0.2em;
-      font-size: 0.95em;
-      color: #555; }
+      font-size: 0.85em;
+      color: #999; }
+      html body #wrapper main.resource h4.resource-tags span:not(:last-child):after {
+        content: ','; }
     @media (min-width: 700px) {
       html body #wrapper main.resource h1.resource-title {
         margin-top: 0.67em;
