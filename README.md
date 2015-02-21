@@ -130,13 +130,13 @@ This first item tells Jekyll to take all of the markup in index.html and plug it
 The second item tells Jekyll to create a variable, page.title, that you can use in the markup of the template. For example, in _layouts/default.html, you could write:
 ```
 <head>
-	<title>{{ page.title }}</title>
+    <title>{{ page.title }}</title>
 </head>
 ```
 and that would render as:
 ```
 <head>
-	<title>Home</title>
+    <title>Home</title>
 </head>
 ```
 
@@ -170,20 +170,20 @@ summary:    Lorem ipsum dolor sit amet, an qui...
 This file represents a student in the students collection and only contains YAML front matter. You can see how powerful collections are if we take a look at a snippet of students.html:
 ```
 <section id="students-list">
-	<ul>
-		{% for student in site.students %}
-			<li id="{{ student.first_name }}-{{ student.last_name }}" class="class-year-{{ student.class_year }}">
-				<img src="http://unsplash.it/500?random">
-				<div class="student-info">
-					<h2 class="student-name">{{ student.name }}</h2>
-					<h3 class="student-year">Class of {{ student.class_year }}</h3>
-					<h3 class="student-focuses">Focuses: {{ student.focus }}</h3>
-					<h3 class="student-website">Website: <a href="{{ student.website }}">{{ student.website }}</a></h3>
-					<p class="student-summary">{{ student.summary }}</p>
-				</div>
-			</li>
-		{% endfor %}
-	</ul>
+    <ul>
+        {% for student in site.students %}
+            <li id="{{ student.first_name }}-{{ student.last_name }}" class="class-year-{{ student.class_year }}">
+                <img src="http://unsplash.it/500?random">
+                <div class="student-info">
+                    <h2 class="student-name">{{ student.name }}</h2>
+                    <h3 class="student-year">Class of {{ student.class_year }}</h3>
+                    <h3 class="student-focuses">Focuses: {{ student.focus }}</h3>
+                    <h3 class="student-website">Website: <a href="{{ student.website }}">{{ student.website }}</a></h3>
+                    <p class="student-summary">{{ student.summary }}</p>
+                </div>
+            </li>
+        {% endfor %}
+    </ul>
 </section>
 ```
 The ```{% %}``` tags represent liquid syntax and their contents are processed by Jekyll to render static HTML in the final site. You can see that all of the students in the students collection can be referenced with ```site.students``` and iterated through with a for loop. In this specific for loop, for each student in the students collection, we pull their name, class year, academic focus, website address, and summary using ```{{ }}``` tags. All of a particular student's information is defined in their markdown file just like Jon's which we saw above. You can find more useful information about collections in Jekyll's website (http://jekyllrb.com/docs/collections/).
@@ -264,7 +264,6 @@ website:    http://google.com
 summary:    Lorem ipsum dolor sit amet, an...
 ---
 ```
-
 
 
 

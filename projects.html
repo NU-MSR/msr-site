@@ -7,11 +7,25 @@ url: index.html
 
 <main id="projects">
 
-	<section id="projects-list">
+	<section id="class-year-select">
 		<h2>Projects</h2>
+		<h3>Class year</h3>
+		<ul id="class-year-select-list">
+			<li>
+				<button value="all">All</button>
+			</li>
+			{% for year in site.collections.projects.years %}
+				<li>
+					<button value="{{ year }}">{{ year }}</button>
+				</li>
+			{% endfor %}
+		</ul>
+	</section>
+
+	<section id="projects-list">
 		<ul>
 			{% for project in site.projects limit: 4 %}
-				<li>
+				<li class="class-year-{{ project.class_year }}">
 					<a href="{{ site.baseurl }}{{ project.url }}">
 						<img src="http://unsplash.it/400?random">
 						<div class="project-info">

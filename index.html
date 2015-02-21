@@ -1,6 +1,7 @@
 ---
 layout: default
-title: Home
+title:  Home
+about:  Lorem ipsum dolor sit amet, ne ius unum solet, denique detraxit in sed, id dicat inimicus has. Eam dico option in. Ne qui erat graeci. Scripta utroque temporibus ne est, tempor laboramus sed ut. Sed probo definitiones cu, cum ut exerci evertitur, indoctum sapientem per eu. Nec te eirmod vocent dolorem, eu nec labores urbanitas. Qui wisi ubique libris in, et erant putant habemus nec. Tamquam copiosae mnesarchum duo no. Cum no utamur tritani evertitur, vel ex munere petentium salutatus, ei verear labitur sententiae nam. Te erat possim detracto has, mei ad tamquam aliquid.
 ---
 
 <main id="home">
@@ -10,14 +11,17 @@ title: Home
 		<button class="see-all"><a href="{{ site.baseurl }}/projects/">See all</a></button>
 		<div id="slider-wrapper">
 			<ul>
-				{% for project in site.projects limit: 4 %}
-					<li>
-						<a href="{{ site.baseurl }}{{ project.url }}">
-							<img src="http://unsplash.it/248/250?random">
-							<h2>{{ project.title }}</h2>
-							<p>{{ project.overview | truncatewords: 18 }}</p>
-						</a>
-					</li>
+				{% for project in site.projects %}
+					{% if project.show_on_home %}
+						<li>
+							<a href="{{ site.baseurl }}{{ project.url }}">
+								<!-- <img src="http://unsplash.it/248/250?random"> -->
+								<img src="http://unsplash.it/1130/400?random">
+								<h2>{{ project.title }}</h2>
+								<p>{{ project.overview | truncatewords: 18 }}</p>
+							</a>
+						</li>
+					{% endif %}
 				{% endfor %}
 			</ul>
 			<button id="slider-prev"><i class="fa fa-caret-left"></i></button>
@@ -31,24 +35,9 @@ title: Home
 	
 	<hr>
 
-	<section id="students">
-		<h2>Students</h2>
-		<button class="see-all"><a href="{{ site.baseurl }}/students/?class_year=all">See all</a></button>
-		<ul>
-			{% for student in site.students limit: 4 %}
-				<li>
-					<img src="http://unsplash.it/200?random">
-					<div class="student-info">
-						<a href="{{ site.baseurl }}/students/#{{ student.first_name }}-{{ student.last_name }}"><h2>{{ student.name }}</h2></a>
-						<h3>Class of {{ student.class_year }}</h3>
-						{% if student.focus %}
-						<h3 class="student-focuses">Focuses: {{ student.focus }}</h3>
-						{% endif %}
-						<h3 class="student-website">Website: <a target="_blank" href="{{ student.website }}">{{ student.website }}</a></h3>
-					</div>
-				</li>
-			{% endfor %}
-		</ul>
+	<section id="about">
+		<h2>About The Program</h2>
+		<p>{{ page.about }}</p>
 	</section>
 
 	<hr> 
@@ -71,7 +60,7 @@ title: Home
 							{% endfor %}
 						</h4>
 						<div class="resource-text">
-							{{ resource.content | truncatewords: 100 }}
+							{{ resource.content | truncatewords: 80 }}
 						</div>
 					</div>
 				</a>

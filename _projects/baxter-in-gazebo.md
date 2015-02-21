@@ -4,6 +4,7 @@ image:              /baxter-in-gazebo2.png
 title:              Baxter in Gazebo
 author:             Jarvis Schultz
 date:               August 29th, 2014
+class_year:         2012
 demo:               https://github.com/jonrovira/ME_495_work
 requirements:       [python-wstool,
                     python-rosdep,
@@ -18,6 +19,7 @@ requirements:       [python-wstool,
                     Baxter Simulation repository (must request access by emailing RSDK.support@rethinkrobotics.com]
 overview:           Learn how to quickly get a Baxter simulation running in Gazebo.
                     Execute the joint position keyboard example in the simulation.
+show_on_home:       true
 ---
 
 
